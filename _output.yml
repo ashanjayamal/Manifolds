@@ -6,7 +6,7 @@ bookdown::gitbook:
         <li><a href="./">Manifolds</a></li>
       after: |
         <li><a href="https://ashanjayamal.github.io/academicpages" target="blank">AJ</a></li>
-    edit: https://github.com/ashanjayamal/Manifolds/%s
+    edit: https://github.com/ashanjayamal/Manifolds/blob/c29f5c5df291a72f7cb81d8419daa241b075e65e/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:

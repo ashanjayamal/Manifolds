@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal &amp; Nalamudu Samarasinghe" />
 
 
-<meta name="date" content="2024-03-05" />
+<meta name="date" content="2024-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,7 +76,7 @@
 <li><a href="./">Manifolds</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Basic Theroms and Definitions</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like https://bookdown.org/yihui/bookdown</a></li>
 <li class="chapter" data-level="2" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>2</b> Manifolds</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="manifolds.html"><a href="manifolds.html#topological-manifolds"><i class="fa fa-check"></i><b>2.1</b> Topological Manifolds</a></li>
@@ -105,6 +105,42 @@
 <h1><span class="header-section-number">Chapter 2</span> Manifolds<a href="manifolds.html#manifolds" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="topological-manifolds" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Topological Manifolds<a href="manifolds.html#topological-manifolds" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:topmanifold" class="definition"><strong>Definition 2.1  </strong></span>Let <span class="math inline">\((M,\mathcal{T})\)</span> be a topological space with topology <span class="math inline">\(\mathcal{T}\)</span>. Then <span class="math inline">\(M\)</span> is called an <span class="math inline">\(n\)</span>-dimensional topological manifold, if the following holds:</p>
+<ul>
+<li><strong>(TM1)</strong>: <span class="math inline">\(M\)</span> is Hausdorff.</li>
+<li><strong>(TM2)</strong>: The topology of <span class="math inline">\(M\)</span> has a countable basis.</li>
+<li><strong>(TM3)</strong>: <span class="math inline">\(M\)</span> is locally homeomorphic to <span class="math inline">\(\mathbb{R}^n\)</span>, that is, for all <span class="math inline">\(p \in M\)</span> exists an open subset <span class="math inline">\(U \subset M\)</span> with <span class="math inline">\(p \in U\)</span>, an open subset <span class="math inline">\(V \subset \mathbb{R}^n\)</span> and a homeomorphism <span class="math inline">\(\varphi : U \rightarrow V\)</span>.</li>
+</ul>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig01"></span>
+<img src="figures/ch1/fig02.jpg" alt="$~$"  />
+<p class="caption">
+Figure 2.1: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-1" class="remark"><em>Remark</em>. </span>The first two conditions in the definition <a href="manifolds.html#def:topmanifold">2.1</a> are more of a technical nature and are sometimes neglected. The important fact is that a topological manifold is locally homeomorphic to <span class="math inline">\(\mathbb{R}^n\)</span>. Loosely speaking, manifolds look locally like Euclidean space. If the topology on <span class="math inline">\(M\)</span> is induced by a metric, then the first condition is satisfied automatically. If <span class="math inline">\(M\)</span> is given as a subset of <span class="math inline">\(\mathbb{R}^N\)</span> with the subset topology, then both conditions M1 and M2 are satisfied automatically.</p>
+</div>
+<p>Let’s see some examples.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 2.1  </strong></span>Euclidean space <span class="math inline">\(M=\mathbb{R}^n\)</span> itself is an <span class="math inline">\(n\)</span>-dimensional topological manifold:</p>
+<ul>
+<li>(TM1): We know that <span class="math inline">\(\mathbb{R}^n\)</span> is metrc space. Let’s say the metric as <span class="math inline">\(d\)</span>. Let <span class="math inline">\(x,y\in \mathcal{R}^n\)</span> with <span class="math inline">\(x\neq y\)</span>.
+Let <span class="math inline">\(r=d(x,y)\)</span>. Since <span class="math inline">\(x\neq y\)</span>,<span class="math inline">\(r&gt;0\)</span>.
+Let <span class="math inline">\(U_x=B(x,r/2)\)</span> and <span class="math inline">\(U_y=B(y,r/2)\)</span>.
+So, <span class="math inline">\(x\in U_x\)</span> and <span class="math inline">\(y\in U_y\)</span> We need to show that <span class="math inline">\(U_x \cap U_y\neq \emptyset\)</span>. We are going to proof by contrdiction. So, asssume the contray, there exist <span class="math inline">\(z\in U_x\cap U_y\)</span>. Thus,
+<span class="math inline">\(d(x,z)&lt;r/2\)</span> and <span class="math inline">\(d(y,z)&lt;r/2\)</span>. Then,
+<span class="math display">\[r=d(x,y)\leq d(x,z)+d(z,y)=d(x,z)+d(y,z)&lt;\frac{r}{2}+\frac{r}{2}=r\]</span>
+This is contradiction. Hence <span class="math inline">\(U_x\cap U_y \neq \emptyset\)</span>. Therefore <span class="math inline">\(M=\mathbb{R}^n\)</span> is Hausdorff.</li>
+<li>(TM2):
+(i), (ii) Obvious.</li>
+</ul>
+<ol start="3" style="list-style-type: lower-roman">
+<li>Holds true with U = M, V = R
+n and x = id.</li>
+</ol>
+</div>
 
 </div>
 </div>
@@ -145,7 +181,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ashanjayamal/Manifolds/01-manifolds.Rmd",
+"link": "https://github.com/ashanjayamal/Manifolds/blob/c29f5c5df291a72f7cb81d8419daa241b075e65e/01-manifolds.Rmd",
 "text": "Edit"
 },
 "history": {
