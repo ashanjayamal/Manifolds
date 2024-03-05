@@ -77,7 +77,10 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Basic Theroms and Definitions</a></li>
-<li class="chapter" data-level="2" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>2</b> Manifolds</a></li>
+<li class="chapter" data-level="2" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>2</b> Manifolds</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="manifolds.html"><a href="manifolds.html#topological-manifolds"><i class="fa fa-check"></i><b>2.1</b> Topological Manifolds</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages" target="blank">AJ</a></li>
 
@@ -100,7 +103,10 @@
             <section class="normal" id="section-">
 <div id="manifolds" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Manifolds<a href="manifolds.html#manifolds" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="topological-manifolds" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Topological Manifolds<a href="manifolds.html#topological-manifolds" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
+</div>
 </div>
             </section>
 
@@ -162,6 +168,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

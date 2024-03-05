@@ -77,7 +77,10 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Basic Theroms and Definitions</a></li>
-<li class="chapter" data-level="2" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>2</b> Manifolds</a></li>
+<li class="chapter" data-level="2" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>2</b> Manifolds</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="manifolds.html"><a href="manifolds.html#topological-manifolds"><i class="fa fa-check"></i><b>2.1</b> Topological Manifolds</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages" target="blank">AJ</a></li>
 
@@ -105,6 +108,41 @@
 </div>
 <div id="basic-theroms-and-definitions" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Basic Theroms and Definitions<a href="index.html#basic-theroms-and-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="definition">
+<p><span id="def:Top" class="definition"><strong>Definition 1.1  (Topology) </strong></span>A topology on a set <span class="math inline">\(X\)</span> is a collection <span class="math inline">\(\mathcal{T}\)</span> of subsets of <span class="math inline">\(X\)</span> such that</p>
+<p><strong>(T1)</strong> <span class="math inline">\(\phi\)</span> and <span class="math inline">\(X\)</span> are in <span class="math inline">\(\mathcal{T}\)</span>;</p>
+<p><strong>(T2)</strong> Any union of subsets in <span class="math inline">\(\mathcal{T}\)</span> is in <span class="math inline">\(\mathcal{T}\)</span>;</p>
+<p><strong>(T3)</strong> The finite intersection of subsets in <span class="math inline">\(\mathcal{T}\)</span> is in <span class="math inline">\(\mathcal{T}\)</span>.</p>
+</div>
+<p>A set <span class="math inline">\(X\)</span> with a topology <span class="math inline">\(\mathcal{T}\)</span> is called a topological space. Denoted by <span class="math inline">\((X,\mathcal{T})\)</span>. An element of <span class="math inline">\(\mathcal{T}\)</span> is called an open set.</p>
+<div class="definition">
+<p><span id="def:unnamed-chunk-1" class="definition"><strong>Definition 1.2  </strong></span>A subset <span class="math inline">\(U \subset M\)</span> is referred to as open in <span class="math inline">\(M\)</span> if <span class="math inline">\(U \in \mathcal{T}\)</span>. A subset <span class="math inline">\(A \subset M\)</span> is termed closed if <span class="math inline">\(M \setminus A \in \mathcal{T}\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-2" class="definition"><strong>Definition 1.3  (Continuity) </strong></span>If both <span class="math inline">\((M, \mathcal{T}_M)\)</span> and <span class="math inline">\((N, \mathcal{T}_N)\)</span> are topological spaces, a map <span class="math inline">\(f : M \rightarrow N\)</span> is termed continuous if <span class="math display">\[f^{-1}(V) \in \mathcal{T}_M \text{ for all } V \in \mathcal{T}_N\]</span>.
+In other words, the preimages of open sets must be open.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-3" class="definition"><strong>Definition 1.4  (Homemorphism) </strong></span>A map <span class="math inline">\(f : M \rightarrow N\)</span> between two topological spaces is called homemorphism if it has following propoties.
+- <span class="math inline">\(f\)</span> is a bijection,
+- <span class="math inline">\(f\)</span> is continuous,
+- the inverse function <span class="math inline">\(f^{-1}\)</span> is continuous.</p>
+<p>Two topological spaces <span class="math inline">\(M\)</span> and <span class="math inline">\(N\)</span> are called homeomorphic if there exists a homeomorphism between them.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-4" class="definition"><strong>Definition 1.5  (Hausdorff Space) </strong></span>A topological space <span class="math inline">\((X,\mathcal{T})\)</span> is called a Hausdorff space if<br />
+<strong>(H1)</strong> <span class="math inline">\(\forall x,y \in X\)</span> such that <span class="math inline">\(x \neq y\)</span>, <span class="math inline">\(\exists U_x, U_y \in \mathcal{T}\)</span> such that <span class="math inline">\(x \in U_x\)</span>, <span class="math inline">\(y \in U_y\)</span>, and <span class="math inline">\(U_x \cap U_y = \emptyset\)</span>.</p>
+<p>i.e., for every pair of distinct points <span class="math inline">\(x, y\)</span> in <span class="math inline">\(X\)</span>, there are disjoint neighborhoods <span class="math inline">\(U_x\)</span> and <span class="math inline">\(U_y\)</span> of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> respectively.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig01"></span>
+<img src="figures/ch1/fig01.jpg" alt="$~$"  />
+<p class="caption">
+Figure 1.1: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-5" class="definition"><strong>Definition 1.6  (Countability) </strong></span>A space <span class="math inline">\(X\)</span> is said to have a <strong>countable basis at the point <span class="math inline">\(x\)</span></strong> if there is a countable collection <span class="math inline">\(\{U_n\}_{n\in\mathbb{Z}^+}\)</span> of neighborhoods of <span class="math inline">\(x\)</span> such that any neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> contains at least one of the sets <span class="math inline">\(U_n\)</span>. A space <span class="math inline">\(X\)</span> that has a countable basis at each of its points is said to satisfy the first countability axiom.</p>
+</div>
 
 </div>
             </section>
@@ -167,6 +205,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
