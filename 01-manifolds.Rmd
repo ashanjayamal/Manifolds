@@ -1,3 +1,4 @@
+
 # Manifolds
 
 ## Topological Manifolds
@@ -11,7 +12,7 @@ Let $(M,\mathcal{T})$ be a topological space with topology $\mathcal{T}$. Then $
 
 ```
 
-```{r echo=FALSE,fig.cap='$~$',label='fig01'}
+```{r echo=FALSE,fig.cap='$~$',label='fig02'}
   knitr::include_graphics('figures/ch1/fig02.jpg') 
 ```
 
@@ -24,15 +25,122 @@ Let's see some examples.
 ```{example}
 Euclidean space $M=\mathbb{R}^n$ itself is an $n$-dimensional topological manifold:
   
--  (TM1): We know that $\mathbb{R}^n$ is metrc space. Let's say the metric as $d$. Let $x,y\in \mathcal{R}^n$ with $x\neq y$. 
+-  (TM1): We know that $\mathbb{R}^n$ is metrc space. Let's say the metric as $d$. Let $x,y\in \mathbb{R}^n$ with $x\neq y$. 
 Let $r=d(x,y)$. Since $x\neq y$,$r>0$.
 Let $U_x=B(x,r/2)$ and $U_y=B(y,r/2)$. 
 So, $x\in U_x$ and $y\in U_y$ We need to show that $U_x \cap U_y\neq \emptyset$. We are going to proof by contrdiction. So, asssume the contray, there exist $z\in U_x\cap U_y$. Thus,
 $d(x,z)<r/2$ and $d(y,z)<r/2$. Then,
 \[r=d(x,y)\leq d(x,z)+d(z,y)=d(x,z)+d(y,z)<\frac{r}{2}+\frac{r}{2}=r\]
 This is contradiction. Hence $U_x\cap U_y \neq \emptyset$. Therefore $M=\mathbb{R}^n$ is Hausdorff.
-- (TM2): 
-(i), (ii) Obvious.
-(iii) Holds true with U = M, V = R
-n and x = id.
+- (TM2): Later I will update this part 
+
+<span style="color:red">Problem **:(**</span>.
+
+
+- (TM3): Let $U=\mathbb{R}^n=M$ and $V=\mathbb{R}^n$ and $\varphi=id$. We can easily tell that idenntity map is bijective. Furthur, we can observe that inverse of identity map is itself and it is well defined.
+So, Let $U'\subset U=\mathbb{R}^n$ be an open set
+\[\forall x\in U'\quad id^{-1}(x)=id(x)=x\]. Thus, \[id(U')=id^{-1}(U')=U'.\] Hence, by definition of continuous mapping, $id$ and $id^{-}$ are continuous. 
 ```
+
+```{example}
+Let $M \subset \mathbb{R}^n$ be an open subset. Then $M$ is an $n$-dimensional topological manifold. \
+(TM1), (TM2) Obvious. \
+(TM3) Holds true with $U = M$, $V = M$ and $x = \text{id}$.
+
+Here Ia m not going to proove this. It is very similar to first example.
+```
+
+```{example}
+ The standard sphere $M = S^n = \{ \underline{y}=(y^0,...,y^{n}) \in \mathbb{R}^{n+1} : ||\underline{y}|| = 1 \}$ is an $n$-dimensional topological manifold. 
+
+- (TM1) and (TM2) , since $S^n$ is a subset of $\mathbb{R}^{n+1}$.
+- (TM3)  We construct two homeomorphisms with the help of the stereographic projection. Let $N$ be north pole of the n-sphere, that is $(\underbrace{0,...,0}_{n~times},1)\in \mathbb{R}^{n+1}$. Let $U_1:=S^n\setminus \{N\}$ and $v_1=\mathbb{R}^{n+1}$. We define
+
+\begin{eqnarray}
+\varphi:U_1&\to & V_1\\
+\underline{y} =(y^0,y^1,...,y^n) & \mapsto & \frac{(y^0,y^1,...,y^n)}{1-y^{n+1}}
+\end{eqnarray}
+  - Cliam 1: $varphi$ is injective.\
+Let $(x^0,...,x^{n}),(y^0,y^1,...,y^n)\in \mathbb{R}^n$. Suppose that $\varphi(x^0,...,x^{n})=\varphi(y^0,y^1,...,y^n)$.
+\begin{eqnarray}
+\varphi(x^0,...,x^{n})&=&\varphi(y^0,y^1,...,y^n)\\
+\frac{(x^0,x^1,...,x^n)}{1-x^{n+1}}&=&\frac{(y^0,y^1,...,y^n)}{1-y^{n+1}}\\
+(y^0, y^1, ..., y^n)(1-x^{n+1}) &=& (x^0, x^1, ..., x^n)(1-y^{n+1})\\
+(y^0 - y^0x^{n+1}, y^1 - y^1x^{n+1}, ..., y^n - y^nx^{n+1}) &=& (x^0 - x^0y^{n+1}, x^1 - x^1y^{n+1}, ..., x^n - x^ny^{n+1})\\
+y^0(1 - x^{n+1}), y^1(1 - x^{n+1}), ..., y^n (1- y^nx^{n+1}) &=&  x^0(1-y^{n+1}), x^1(1 - y^{n+1}), ..., x^n (1- y^{n+1})\\
+\end{eqnarray}
+Thus,  $y^i(1 - x^{n+1}) = x^i(1 -y^{n+1})$ for all $i = 0, 1, ..., n$.
+ Since $1 - y^{n+1}, 1 - x^{n+1} > 0$, 
+ ?
+
+   ?
+   
+   ?
+   
+   ?
+ 
+ <span style="color:red">Problem HOW INJECTIVITY COMES**:(**</span>.
+  
+<span style="color:yellow">CHECK**:(**</span>.                                       
+  - Claim 2: $\varphi$ is surejctive.\  
+Surjectivity means that for every $\underline{v} \in V_1 = \mathbb{R}^n$, there exists some $\underline{y} \in U_1$ such that $\varphi(\underline{y}) = \underline{v}$.
+
+So, let $\underline{v} = (v^0, v^1, ..., v^n) \in V_1$. We need to find $\underline{y} = (y^0, y^1, ..., y^n) \in U_1$ such that
+
+$$\frac{(y^0, y^1, ..., y^n)}{1-y^{n+1}} = \underline{v}.$$
+
+We can solve this equation for $\underline{y}$ as follows:
+
+$$\underline{y} = (1-y^{n+1})\underline{v} = \underline{v} - y^{n+1}\underline{v}.$$
+
+We know that $\underline{y} \in U_1 = S^n \setminus \{N\}$, so $y^{n+1} = 1 - \|\underline{y}\|^2$. Substituting this into the equation gives us
+
+$$\underline{y} = \underline{v} - (1 - \|\underline{y}\|^2)\underline{v} = \|\underline{y}\|^2\underline{v}.$$
+
+Solving this equation for $\|\underline{y}\|^2$ gives us
+
+$$\|\underline{y}\|^2 = \frac{\|\underline{v}\|^2}{1 + \|\underline{v}\|^2}.$$
+
+Substituting this back into the equation for $\underline{y}$ gives us
+
+$$\underline{y} = \frac{\underline{v}}{1 + \|\underline{v}\|^2}.$$
+
+This is a well-defined point in $U_1$ for every $\underline{v} \in V_1$, so $\varphi$ is surjective.
+
+  - Claim: $\varphi$ is continuous.\
+Note that the inverse map $\phi$ is given by,
+\begin{eqnarray}
+\phi : V_1 &\rightarrow & U_1\\
+\underline{x}= (x^0, x^1, ... , x^n) &\mapsto & \frac{(x^0,x^1,...,x^{n-1})}{1 + x^n} 
+\end{eqnarray}
+<span style="color:yellow">I will update this proof. I want some to to write rigirs proof**:(**</span>.
+  
+  
+  
+Analogously, we define the homeomorphism, which omits the south pole:
+Let now $U_2 := S^n \setminus \{S\}$ with $S := ( 0,... , 0, -1) \in \mathbb{R}^{n+1}$ and $V_2 := \mathbb{R}^n$.
+Then
+\begin{eqnarray}
+\varphi : U_2 &\rightarrow & V_2,\\
+\underline{y}= (y^0, y^1, ... , y^n) &\mapsto & \frac{(y^0,y^1,...,y^n)}{1 + y^n} 
+\end{eqnarray}
+
+Therefore,  $n$-sphere $S^n$ is an $n$-dimensional topological manifold.
+```
+
+```{example,name='Non-Example'} 
+We consider $M := \{ (y_1, y_2, y_3) \in \mathbb{R}^3 | (y_1)^2 = (y_2)^2 + (y_3)^2 \}$, the double cone.
+
+Since $M \subset \mathbb{R}^3$, both (i) and (ii) are satisfied.
+
+But $M$ is **not** a 2-dimensional manifold. Assume  it were, then there would exist an open subset $U \subset M$ with $0 \in U$, an open subset $V \subset \mathbb{R}^2$ and a homeomorphism $\varphi : U \rightarrow V$ with $\varphi(0) = 0$.
+<span style="color:red">How do we Gruntee that such hormouphsim exsist that maps 0 to 0**:(**</span>
+                                                                      Without losss of generality assume $V = B_r(x(0))$ with $r > 0$. Choose $q_1, q_2 \in U$ with $q_1^1 > 0$ and $q_1^2 < 0$. Furthermore, choose a continuous path $c : [0, 1] \rightarrow V$ with $c(0) = x(q_1)$, $c(1) = x(q_2)$ and $c(t) \neq x(0)$ for all $t \in [0, 1]$.
+
+Define the continuous path $\tilde{c} := x^{-1} \circ c : [0, 1] \rightarrow U$. Then $\tilde{c}(0) = q_1$, $\tilde{c}(1) = q_2$, that is, we have $\tilde{c}_1(0) > 0$ while $\tilde{c}_1(1) < 0$. Applying the mean value theorem we find, that there exists a $t \in (0, 1)$ with $\tilde{c}_1(t) = 0$. Then $\tilde{c}(t) = (0, 0, 0)$ and consequently $c(t) = x(\tilde{c}(t)) = x(0)$, which contradicts the choice of $c$. Hence, $M$ is not a 2-dimensional topological manifold.
+                     
+                                                                                             
+```
+
+
+

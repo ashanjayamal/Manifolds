@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Chapter 2 Manifolds | Manifolds" />
   <meta property="og:type" content="book" />
-  
+  <meta property="og:image" content="https://ashanjayamal.github.io/Manifolds/manifolds.html#topological-manifolds/figures/ch1/fig01.jpg" />
   <meta property="og:description" content="Lecture note ongoing seminar Manifolds" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
@@ -18,12 +18,12 @@
   <meta name="twitter:title" content="Chapter 2 Manifolds | Manifolds" />
   
   <meta name="twitter:description" content="Lecture note ongoing seminar Manifolds" />
-  
+  <meta name="twitter:image" content="https://ashanjayamal.github.io/Manifolds/manifolds.html#topological-manifolds/figures/ch1/fig01.jpg" />
 
 <meta name="author" content="Ashan Jayamal &amp; Nalamudu Samarasinghe" />
 
 
-<meta name="date" content="2024-03-06" />
+<meta name="date" content="2024-03-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,7 +76,10 @@
 <li><a href="./">Manifolds</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like https://bookdown.org/yihui/bookdown</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Basic Theroms and Definitions</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="index.html"><a href="index.html#stereographic-projection"><i class="fa fa-check"></i><b>1.0.1</b> Stereographic Projection</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>2</b> Manifolds</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="manifolds.html"><a href="manifolds.html#topological-manifolds"><i class="fa fa-check"></i><b>2.1</b> Topological Manifolds</a></li>
@@ -113,7 +116,7 @@
 <li><strong>(TM3)</strong>: <span class="math inline">\(M\)</span> is locally homeomorphic to <span class="math inline">\(\mathbb{R}^n\)</span>, that is, for all <span class="math inline">\(p \in M\)</span> exists an open subset <span class="math inline">\(U \subset M\)</span> with <span class="math inline">\(p \in U\)</span>, an open subset <span class="math inline">\(V \subset \mathbb{R}^n\)</span> and a homeomorphism <span class="math inline">\(\varphi : U \rightarrow V\)</span>.</li>
 </ul>
 </div>
-<div class="figure"><span style="display:block;" id="fig:fig01"></span>
+<div class="figure"><span style="display:block;" id="fig:fig02"></span>
 <img src="figures/ch1/fig02.jpg" alt="$~$"  />
 <p class="caption">
 Figure 2.1: <span class="math inline">\(~\)</span>
@@ -124,22 +127,95 @@ Figure 2.1: <span class="math inline">\(~\)</span>
 </div>
 <p>Let’s see some examples.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 2.1  </strong></span>Euclidean space <span class="math inline">\(M=\mathbb{R}^n\)</span> itself is an <span class="math inline">\(n\)</span>-dimensional topological manifold:</p>
+<p><span id="exm:unnamed-chunk-7" class="example"><strong>Example 2.1  </strong></span>Euclidean space <span class="math inline">\(M=\mathbb{R}^n\)</span> itself is an <span class="math inline">\(n\)</span>-dimensional topological manifold:</p>
 <ul>
-<li>(TM1): We know that <span class="math inline">\(\mathbb{R}^n\)</span> is metrc space. Let’s say the metric as <span class="math inline">\(d\)</span>. Let <span class="math inline">\(x,y\in \mathcal{R}^n\)</span> with <span class="math inline">\(x\neq y\)</span>.
+<li>(TM1): We know that <span class="math inline">\(\mathbb{R}^n\)</span> is metrc space. Let’s say the metric as <span class="math inline">\(d\)</span>. Let <span class="math inline">\(x,y\in \mathbb{R}^n\)</span> with <span class="math inline">\(x\neq y\)</span>.
 Let <span class="math inline">\(r=d(x,y)\)</span>. Since <span class="math inline">\(x\neq y\)</span>,<span class="math inline">\(r&gt;0\)</span>.
 Let <span class="math inline">\(U_x=B(x,r/2)\)</span> and <span class="math inline">\(U_y=B(y,r/2)\)</span>.
 So, <span class="math inline">\(x\in U_x\)</span> and <span class="math inline">\(y\in U_y\)</span> We need to show that <span class="math inline">\(U_x \cap U_y\neq \emptyset\)</span>. We are going to proof by contrdiction. So, asssume the contray, there exist <span class="math inline">\(z\in U_x\cap U_y\)</span>. Thus,
 <span class="math inline">\(d(x,z)&lt;r/2\)</span> and <span class="math inline">\(d(y,z)&lt;r/2\)</span>. Then,
 <span class="math display">\[r=d(x,y)\leq d(x,z)+d(z,y)=d(x,z)+d(y,z)&lt;\frac{r}{2}+\frac{r}{2}=r\]</span>
 This is contradiction. Hence <span class="math inline">\(U_x\cap U_y \neq \emptyset\)</span>. Therefore <span class="math inline">\(M=\mathbb{R}^n\)</span> is Hausdorff.</li>
-<li>(TM2):
-(i), (ii) Obvious.</li>
+<li>(TM2): Later I will update this part</li>
 </ul>
-<ol start="3" style="list-style-type: lower-roman">
-<li>Holds true with U = M, V = R
-n and x = id.</li>
-</ol>
+<p><span style="color:red">Problem <strong>:(</strong></span>.</p>
+<ul>
+<li>(TM3): Let <span class="math inline">\(U=\mathbb{R}^n=M\)</span> and <span class="math inline">\(V=\mathbb{R}^n\)</span> and <span class="math inline">\(\varphi=id\)</span>. We can easily tell that idenntity map is bijective. Furthur, we can observe that inverse of identity map is itself and it is well defined.
+So, Let <span class="math inline">\(U&#39;\subset U=\mathbb{R}^n\)</span> be an open set
+<span class="math display">\[\forall x\in U&#39;\quad id^{-1}(x)=id(x)=x\]</span>. Thus, <span class="math display">\[id(U&#39;)=id^{-1}(U&#39;)=U&#39;.\]</span> Hence, by definition of continuous mapping, <span class="math inline">\(id\)</span> and <span class="math inline">\(id^{-}\)</span> are continuous.</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-8" class="example"><strong>Example 2.2  </strong></span>Let <span class="math inline">\(M \subset \mathbb{R}^n\)</span> be an open subset. Then <span class="math inline">\(M\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.<br />
+(TM1), (TM2) Obvious.<br />
+(TM3) Holds true with <span class="math inline">\(U = M\)</span>, <span class="math inline">\(V = M\)</span> and <span class="math inline">\(x = \text{id}\)</span>.</p>
+<p>Here Ia m not going to proove this. It is very similar to first example.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-9" class="example"><strong>Example 2.3  </strong></span>The standard sphere <span class="math inline">\(M = S^n = \{ \underline{y}=(y^0,...,y^{n}) \in \mathbb{R}^{n+1} : ||\underline{y}|| = 1 \}\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.</p>
+<ul>
+<li>(TM1) and (TM2) , since <span class="math inline">\(S^n\)</span> is a subset of <span class="math inline">\(\mathbb{R}^{n+1}\)</span>.</li>
+<li>(TM3) We construct two homeomorphisms with the help of the stereographic projection. Let <span class="math inline">\(N\)</span> be north pole of the n-sphere, that is <span class="math inline">\((\underbrace{0,...,0}_{n~times},1)\in \mathbb{R}^{n+1}\)</span>. Let <span class="math inline">\(U_1:=S^n\setminus \{N\}\)</span> and <span class="math inline">\(v_1=\mathbb{R}^{n+1}\)</span>. We define</li>
+</ul>
+<p><span class="math display">\[\begin{eqnarray}
+\varphi:U_1&amp;\to &amp; V_1\\
+\underline{y} =(y^0,y^1,...,y^n) &amp; \mapsto &amp; \frac{(y^0,y^1,...,y^n)}{1-y^{n+1}}
+\end{eqnarray}\]</span>
+- Cliam 1: <span class="math inline">\(varphi\)</span> is injective.<br />
+Let <span class="math inline">\((x^0,...,x^{n}),(y^0,y^1,...,y^n)\in \mathbb{R}^n\)</span>. Suppose that <span class="math inline">\(\varphi(x^0,...,x^{n})=\varphi(y^0,y^1,...,y^n)\)</span>.
+<span class="math display">\[\begin{eqnarray}
+\varphi(x^0,...,x^{n})&amp;=&amp;\varphi(y^0,y^1,...,y^n)\\
+\frac{(x^0,x^1,...,x^n)}{1-x^{n+1}}&amp;=&amp;\frac{(y^0,y^1,...,y^n)}{1-y^{n+1}}\\
+(y^0, y^1, ..., y^n)(1-x^{n+1}) &amp;=&amp; (x^0, x^1, ..., x^n)(1-y^{n+1})\\
+(y^0 - y^0x^{n+1}, y^1 - y^1x^{n+1}, ..., y^n - y^nx^{n+1}) &amp;=&amp; (x^0 - x^0y^{n+1}, x^1 - x^1y^{n+1}, ..., x^n - x^ny^{n+1})\\
+y^0(1 - x^{n+1}), y^1(1 - x^{n+1}), ..., y^n (1- y^nx^{n+1}) &amp;=&amp;  x^0(1-y^{n+1}), x^1(1 - y^{n+1}), ..., x^n (1- y^{n+1})\\
+\end{eqnarray}\]</span>
+Thus, <span class="math inline">\(y^i(1 - x^{n+1}) = x^i(1 -y^{n+1})\)</span> for all <span class="math inline">\(i = 0, 1, ..., n\)</span>.
+Since <span class="math inline">\(1 - y^{n+1}, 1 - x^{n+1} &gt; 0\)</span>,
+?</p>
+<p>?</p>
+<p>?</p>
+<p>?</p>
+<p><span style="color:red">Problem HOW INJECTIVITY COMES<strong>:(</strong></span>.</p>
+<p><span style="color:yellow">CHECK<strong>:(</strong></span>.<br />
+- Claim 2: <span class="math inline">\(\varphi\)</span> is surejctive. 
+Surjectivity means that for every <span class="math inline">\(\underline{v} \in V_1 = \mathbb{R}^n\)</span>, there exists some <span class="math inline">\(\underline{y} \in U_1\)</span> such that <span class="math inline">\(\varphi(\underline{y}) = \underline{v}\)</span>.</p>
+<p>So, let <span class="math inline">\(\underline{v} = (v^0, v^1, ..., v^n) \in V_1\)</span>. We need to find <span class="math inline">\(\underline{y} = (y^0, y^1, ..., y^n) \in U_1\)</span> such that</p>
+<p><span class="math display">\[\frac{(y^0, y^1, ..., y^n)}{1-y^{n+1}} = \underline{v}.\]</span></p>
+<p>We can solve this equation for <span class="math inline">\(\underline{y}\)</span> as follows:</p>
+<p><span class="math display">\[\underline{y} = (1-y^{n+1})\underline{v} = \underline{v} - y^{n+1}\underline{v}.\]</span></p>
+<p>We know that <span class="math inline">\(\underline{y} \in U_1 = S^n \setminus \{N\}\)</span>, so <span class="math inline">\(y^{n+1} = 1 - \|\underline{y}\|^2\)</span>. Substituting this into the equation gives us</p>
+<p><span class="math display">\[\underline{y} = \underline{v} - (1 - \|\underline{y}\|^2)\underline{v} = \|\underline{y}\|^2\underline{v}.\]</span></p>
+<p>Solving this equation for <span class="math inline">\(\|\underline{y}\|^2\)</span> gives us</p>
+<p><span class="math display">\[\|\underline{y}\|^2 = \frac{\|\underline{v}\|^2}{1 + \|\underline{v}\|^2}.\]</span></p>
+<p>Substituting this back into the equation for <span class="math inline">\(\underline{y}\)</span> gives us</p>
+<p><span class="math display">\[\underline{y} = \frac{\underline{v}}{1 + \|\underline{v}\|^2}.\]</span></p>
+<p>This is a well-defined point in <span class="math inline">\(U_1\)</span> for every <span class="math inline">\(\underline{v} \in V_1\)</span>, so <span class="math inline">\(\varphi\)</span> is surjective.</p>
+<ul>
+<li>Claim: <span class="math inline">\(\varphi\)</span> is continuous.<br />
+Note that the inverse map <span class="math inline">\(\phi\)</span> is given by,
+<span class="math display">\[\begin{eqnarray}
+\phi : V_1 &amp;\rightarrow &amp; U_1\\
+\underline{x}= (x^0, x^1, ... , x^n) &amp;\mapsto &amp; \frac{(x^0,x^1,...,x^{n-1})}{1 + x^n}
+\end{eqnarray}\]</span>
+<span style="color:yellow">I will update this proof. I want some to to write rigirs proof<strong>:(</strong></span>.</li>
+</ul>
+<p>Analogously, we define the homeomorphism, which omits the south pole:
+Let now <span class="math inline">\(U_2 := S^n \setminus \{S\}\)</span> with <span class="math inline">\(S := ( 0,... , 0, -1) \in \mathbb{R}^{n+1}\)</span> and <span class="math inline">\(V_2 := \mathbb{R}^n\)</span>.
+Then
+<span class="math display">\[\begin{eqnarray}
+\varphi : U_2 &amp;\rightarrow &amp; V_2,\\
+\underline{y}= (y^0, y^1, ... , y^n) &amp;\mapsto &amp; \frac{(y^0,y^1,...,y^n)}{1 + y^n}
+\end{eqnarray}\]</span></p>
+<p>Therefore, <span class="math inline">\(n\)</span>-sphere <span class="math inline">\(S^n\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.</p>
+</div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-10" class="example"><strong>Example 2.4  (Non-Example) </strong></span>We consider <span class="math inline">\(M := \{ (y_1, y_2, y_3) \in \mathbb{R}^3 | (y_1)^2 = (y_2)^2 + (y_3)^2 \}\)</span>, the double cone.</p>
+<p>Since <span class="math inline">\(M \subset \mathbb{R}^3\)</span>, both (i) and (ii) are satisfied.</p>
+<p>But <span class="math inline">\(M\)</span> is <strong>not</strong> a 2-dimensional manifold. Assume it were, then there would exist an open subset <span class="math inline">\(U \subset M\)</span> with <span class="math inline">\(0 \in U\)</span>, an open subset <span class="math inline">\(V \subset \mathbb{R}^2\)</span> and a homeomorphism <span class="math inline">\(\varphi : U \rightarrow V\)</span> with <span class="math inline">\(\varphi(0) = 0\)</span>.
+<span style="color:red">How do we Gruntee that such hormouphsim exsist that maps 0 to 0<strong>:(</strong></span>
+Without losss of generality assume <span class="math inline">\(V = B_r(x(0))\)</span> with <span class="math inline">\(r &gt; 0\)</span>. Choose <span class="math inline">\(q_1, q_2 \in U\)</span> with <span class="math inline">\(q_1^1 &gt; 0\)</span> and <span class="math inline">\(q_1^2 &lt; 0\)</span>. Furthermore, choose a continuous path <span class="math inline">\(c : [0, 1] \rightarrow V\)</span> with <span class="math inline">\(c(0) = x(q_1)\)</span>, <span class="math inline">\(c(1) = x(q_2)\)</span> and <span class="math inline">\(c(t) \neq x(0)\)</span> for all <span class="math inline">\(t \in [0, 1]\)</span>.</p>
+<p>Define the continuous path <span class="math inline">\(\tilde{c} := x^{-1} \circ c : [0, 1] \rightarrow U\)</span>. Then <span class="math inline">\(\tilde{c}(0) = q_1\)</span>, <span class="math inline">\(\tilde{c}(1) = q_2\)</span>, that is, we have <span class="math inline">\(\tilde{c}_1(0) &gt; 0\)</span> while <span class="math inline">\(\tilde{c}_1(1) &lt; 0\)</span>. Applying the mean value theorem we find, that there exists a <span class="math inline">\(t \in (0, 1)\)</span> with <span class="math inline">\(\tilde{c}_1(t) = 0\)</span>. Then <span class="math inline">\(\tilde{c}(t) = (0, 0, 0)\)</span> and consequently <span class="math inline">\(c(t) = x(\tilde{c}(t)) = x(0)\)</span>, which contradicts the choice of <span class="math inline">\(c\)</span>. Hence, <span class="math inline">\(M\)</span> is not a 2-dimensional topological manifold.</p>
 </div>
 
 </div>
