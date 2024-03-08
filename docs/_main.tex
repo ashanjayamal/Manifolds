@@ -80,7 +80,7 @@
 
 \title{Manifolds}
 \author{Ashan Jayamal \& Nalamudu Samarasinghe}
-\date{2024-03-07}
+\date{2024-03-08}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -349,16 +349,56 @@ Therefore, \(n\)-sphere \(S^n\) is an \(n\)-dimensional topological manifold.
 \end{example}
 
 \begin{example}[Non-Example]
-\protect\hypertarget{exm:unnamed-chunk-10}{}\label{exm:unnamed-chunk-10}We consider \(M := \{ (y_1, y_2, y_3) \in \mathbb{R}^3 | (y_1)^2 = (y_2)^2 + (y_3)^2 \}\), the double cone.
+\protect\hypertarget{exm:unnamed-chunk-10}{}\label{exm:unnamed-chunk-10}We consider \(M := \{ (y^1, y^2, y^3) \in \mathbb{R}^3 | (y^1)^2 = (y^2)^2 + (y^3)^2 \}\), the double cone.
 
 Since \(M \subset \mathbb{R}^3\), both (i) and (ii) are satisfied.
 
 But \(M\) is \textbf{not} a 2-dimensional manifold. Assume it were, then there would exist an open subset \(U \subset M\) with \(0 \in U\), an open subset \(V \subset \mathbb{R}^2\) and a homeomorphism \(\varphi : U \rightarrow V\) with \(\varphi(0) = 0\).
 {How do we Gruntee that such hormouphsim exsist that maps 0 to 0\textbf{:(}}
-Without losss of generality assume \(V = B_r(x(0))\) with \(r > 0\). Choose \(q_1, q_2 \in U\) with \(q_1^1 > 0\) and \(q_1^2 < 0\). Furthermore, choose a continuous path \(c : [0, 1] \rightarrow V\) with \(c(0) = x(q_1)\), \(c(1) = x(q_2)\) and \(c(t) \neq x(0)\) for all \(t \in [0, 1]\).
+Without losss of generality assume \(V = B_r(x(0))\) with \(r > 0\). Choose \((p^1,p^2,p^3), (q^1,q^2,q^3) \in U\) with \(p^1 > 0\) and \(q^1 < 0\). Furthermore, choose a continuous path \(c : [0, 1] \rightarrow V\) with \(c(0) = x(q_1)\), \(c(1) = x(q_2)\) and \(c(t) \neq x(0)\) for all \(t \in [0, 1]\).
 
 Define the continuous path \(\tilde{c} := x^{-1} \circ c : [0, 1] \rightarrow U\). Then \(\tilde{c}(0) = q_1\), \(\tilde{c}(1) = q_2\), that is, we have \(\tilde{c}_1(0) > 0\) while \(\tilde{c}_1(1) < 0\). Applying the mean value theorem we find, that there exists a \(t \in (0, 1)\) with \(\tilde{c}_1(t) = 0\). Then \(\tilde{c}(t) = (0, 0, 0)\) and consequently \(c(t) = x(\tilde{c}(t)) = x(0)\), which contradicts the choice of \(c\). Hence, \(M\) is not a 2-dimensional topological manifold.
 \end{example}
+
+\begin{definition}[charts]
+\protect\hypertarget{def:unnamed-chunk-11}{}\label{def:unnamed-chunk-11}If \(M\) is an \(n\)-dimensional topological manifold, the homeomorphisms \(\varphi : U \to V\) are called charts (or local coordinate systems) of \(M\).
+\end{definition}
+
+\includegraphics{figures/ch1/fig06.jpg}
+After choosing a local coordinate system \(\varphi : U \rightarrow V\) every point \(p \in U\) is uniquely characterized by its coordinates \((\varphi^1(p), \ldots , \varphi^n(p))\).
+
+\begin{example}[0-dimesional manifold]
+\protect\hypertarget{exm:unnamed-chunk-12}{}\label{exm:unnamed-chunk-12}In a \(0\)-dimensional manifold \(M\) every point \(p \in M\) has an open neighborhood \(U\), which is homeomorphic to \(R^0 = \{0\}\). Consequently \(\{p\} = U\) is an open subset of \(M\) for all
+\(p \in M\), that is, \(M\) carries the discrete topology. Since there exists a countable basis for the topology on \(M\) and the topology is discrete in addition, \(M\) has to be countable itself.
+\end{example}
+
+\begin{figure}
+\centering
+\includegraphics{figures/ch1/fig07.png}
+\caption{\label{fig:fig07}\(~\)}
+\end{figure}
+
+\begin{proposition}
+\protect\hypertarget{prp:unnamed-chunk-13}{}\label{prp:unnamed-chunk-13}A topological space \(M\) is a 0-dimensional topological manifold, if and only if \(M\) is countable and carries the discrete topology.
+\end{proposition}
+
+\begin{proof}
+\leavevmode
+
+\begin{itemize}
+\item
+  (\(\implies\)) By definition, a 0-dimensional topological manifold is a topological space where every point has a neighborhood homeomorphic to the 0-dimensional Euclidean space, which is a single point \(\{0\}\). This implies that for every point \(p \in M\), there exists an open neighborhood \(U\) such that \(\{p\} = U\). This is exactly the definition of a discrete topology.
+
+  Since, there exists a countable basis for the topology on \(M\), and every point in \(M\) is an open set (i.e., the topology is discrete), then \(M\) must be countable. This is because every point in \(M\) corresponds to an open set in the basis, and since the basis is countable, \(M\) must also be countable.
+\item
+  (\(\Longleftarrow\)) If \(M\) carries the discrete topology, then every subset of \(M\) is open. In particular, for every point \(p \in M\), the set \(\{p\}\) is an open set. This means that every point in \(M\) has a neighborhood homeomorphic to the 0-dimensional Euclidean space, which is a single point \(\{0\}\). This is exactly the definition of a 0-dimensional topological manifold.
+
+  If \(M\) is countable, then there exists a countable basis for the topology on \(M\). Since every point in \(M\) is an open set (i.e., the topology is discrete), this basis can be taken to be the set of all singletons \(\{p\}\), where \(p \in M\).
+\end{itemize}
+
+Therefore, a topological space \(M\) is a 0-dimensional topological manifold if and only if \(M\) is countable and carries the discrete topology.
+
+\end{proof}
 
   \bibliography{book.bib,packages.bib}
 

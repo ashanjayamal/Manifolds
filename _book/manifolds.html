@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal &amp; Nalamudu Samarasinghe" />
 
 
-<meta name="date" content="2024-03-07" />
+<meta name="date" content="2024-03-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -210,12 +210,45 @@ Then
 <p>Therefore, <span class="math inline">\(n\)</span>-sphere <span class="math inline">\(S^n\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-10" class="example"><strong>Example 2.4  (Non-Example) </strong></span>We consider <span class="math inline">\(M := \{ (y_1, y_2, y_3) \in \mathbb{R}^3 | (y_1)^2 = (y_2)^2 + (y_3)^2 \}\)</span>, the double cone.</p>
+<p><span id="exm:unnamed-chunk-10" class="example"><strong>Example 2.4  (Non-Example) </strong></span>We consider <span class="math inline">\(M := \{ (y^1, y^2, y^3) \in \mathbb{R}^3 | (y^1)^2 = (y^2)^2 + (y^3)^2 \}\)</span>, the double cone.</p>
 <p>Since <span class="math inline">\(M \subset \mathbb{R}^3\)</span>, both (i) and (ii) are satisfied.</p>
 <p>But <span class="math inline">\(M\)</span> is <strong>not</strong> a 2-dimensional manifold. Assume it were, then there would exist an open subset <span class="math inline">\(U \subset M\)</span> with <span class="math inline">\(0 \in U\)</span>, an open subset <span class="math inline">\(V \subset \mathbb{R}^2\)</span> and a homeomorphism <span class="math inline">\(\varphi : U \rightarrow V\)</span> with <span class="math inline">\(\varphi(0) = 0\)</span>.
 <span style="color:red">How do we Gruntee that such hormouphsim exsist that maps 0 to 0<strong>:(</strong></span>
-Without losss of generality assume <span class="math inline">\(V = B_r(x(0))\)</span> with <span class="math inline">\(r &gt; 0\)</span>. Choose <span class="math inline">\(q_1, q_2 \in U\)</span> with <span class="math inline">\(q_1^1 &gt; 0\)</span> and <span class="math inline">\(q_1^2 &lt; 0\)</span>. Furthermore, choose a continuous path <span class="math inline">\(c : [0, 1] \rightarrow V\)</span> with <span class="math inline">\(c(0) = x(q_1)\)</span>, <span class="math inline">\(c(1) = x(q_2)\)</span> and <span class="math inline">\(c(t) \neq x(0)\)</span> for all <span class="math inline">\(t \in [0, 1]\)</span>.</p>
+Without losss of generality assume <span class="math inline">\(V = B_r(x(0))\)</span> with <span class="math inline">\(r &gt; 0\)</span>. Choose <span class="math inline">\((p^1,p^2,p^3), (q^1,q^2,q^3) \in U\)</span> with <span class="math inline">\(p^1 &gt; 0\)</span> and <span class="math inline">\(q^1 &lt; 0\)</span>. Furthermore, choose a continuous path <span class="math inline">\(c : [0, 1] \rightarrow V\)</span> with <span class="math inline">\(c(0) = x(q_1)\)</span>, <span class="math inline">\(c(1) = x(q_2)\)</span> and <span class="math inline">\(c(t) \neq x(0)\)</span> for all <span class="math inline">\(t \in [0, 1]\)</span>.</p>
 <p>Define the continuous path <span class="math inline">\(\tilde{c} := x^{-1} \circ c : [0, 1] \rightarrow U\)</span>. Then <span class="math inline">\(\tilde{c}(0) = q_1\)</span>, <span class="math inline">\(\tilde{c}(1) = q_2\)</span>, that is, we have <span class="math inline">\(\tilde{c}_1(0) &gt; 0\)</span> while <span class="math inline">\(\tilde{c}_1(1) &lt; 0\)</span>. Applying the mean value theorem we find, that there exists a <span class="math inline">\(t \in (0, 1)\)</span> with <span class="math inline">\(\tilde{c}_1(t) = 0\)</span>. Then <span class="math inline">\(\tilde{c}(t) = (0, 0, 0)\)</span> and consequently <span class="math inline">\(c(t) = x(\tilde{c}(t)) = x(0)\)</span>, which contradicts the choice of <span class="math inline">\(c\)</span>. Hence, <span class="math inline">\(M\)</span> is not a 2-dimensional topological manifold.</p>
+</div>
+<div class="definition">
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 2.2  (charts) </strong></span>If <span class="math inline">\(M\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold, the homeomorphisms <span class="math inline">\(\varphi : U \to V\)</span> are called charts (or local coordinate systems) of <span class="math inline">\(M\)</span>.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig06"></span>
+<img src="figures/ch1/fig06.jpg" alt="$~$"  />
+<p class="caption">
+Figure 2.2: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<p>After choosing a local coordinate system <span class="math inline">\(\varphi : U \rightarrow V\)</span> every point <span class="math inline">\(p \in U\)</span> is uniquely characterized by its coordinates <span class="math inline">\((\varphi^1(p), \ldots , \varphi^n(p))\)</span>.</p>
+<div class="example">
+<p><span id="exm:unnamed-chunk-12" class="example"><strong>Example 2.5  (0-dimesional manifold) </strong></span>In a <span class="math inline">\(0\)</span>-dimensional manifold <span class="math inline">\(M\)</span> every point <span class="math inline">\(p \in M\)</span> has an open neighborhood <span class="math inline">\(U\)</span>, which is homeomorphic to <span class="math inline">\(R^0 = \{0\}\)</span>. Consequently <span class="math inline">\(\{p\} = U\)</span> is an open subset of <span class="math inline">\(M\)</span> for all
+<span class="math inline">\(p \in M\)</span>, that is, <span class="math inline">\(M\)</span> carries the discrete topology. Since there exists a countable basis for the topology on <span class="math inline">\(M\)</span> and the topology is discrete in addition, <span class="math inline">\(M\)</span> has to be countable itself.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig07"></span>
+<img src="figures/ch1/fig07.png" alt="$~$"  />
+<p class="caption">
+Figure 2.3: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-13" class="proposition"><strong>Proposition 2.1  </strong></span>A topological space <span class="math inline">\(M\)</span> is a 0-dimensional topological manifold, if and only if <span class="math inline">\(M\)</span> is countable and carries the discrete topology.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span></p>
+<ul>
+<li><p>(<span class="math inline">\(\implies\)</span>) By definition, a 0-dimensional topological manifold is a topological space where every point has a neighborhood homeomorphic to the 0-dimensional Euclidean space, which is a single point <span class="math inline">\(\{0\}\)</span>. This implies that for every point <span class="math inline">\(p \in M\)</span>, there exists an open neighborhood <span class="math inline">\(U\)</span> such that <span class="math inline">\(\{p\} = U\)</span>. This is exactly the definition of a discrete topology.</p>
+<p>Since, there exists a countable basis for the topology on <span class="math inline">\(M\)</span>, and every point in <span class="math inline">\(M\)</span> is an open set (i.e., the topology is discrete), then <span class="math inline">\(M\)</span> must be countable. This is because every point in <span class="math inline">\(M\)</span> corresponds to an open set in the basis, and since the basis is countable, <span class="math inline">\(M\)</span> must also be countable.</p></li>
+<li><p>(<span class="math inline">\(\Longleftarrow\)</span>) If <span class="math inline">\(M\)</span> carries the discrete topology, then every subset of <span class="math inline">\(M\)</span> is open. In particular, for every point <span class="math inline">\(p \in M\)</span>, the set <span class="math inline">\(\{p\}\)</span> is an open set. This means that every point in <span class="math inline">\(M\)</span> has a neighborhood homeomorphic to the 0-dimensional Euclidean space, which is a single point <span class="math inline">\(\{0\}\)</span>. This is exactly the definition of a 0-dimensional topological manifold.</p>
+<p>If <span class="math inline">\(M\)</span> is countable, then there exists a countable basis for the topology on <span class="math inline">\(M\)</span>. Since every point in <span class="math inline">\(M\)</span> is an open set (i.e., the topology is discrete), this basis can be taken to be the set of all singletons <span class="math inline">\(\{p\}\)</span>, where <span class="math inline">\(p \in M\)</span>.</p></li>
+</ul>
+<p>Therefore, a topological space <span class="math inline">\(M\)</span> is a 0-dimensional topological manifold if and only if <span class="math inline">\(M\)</span> is countable and carries the discrete topology.</p>
 </div>
 
 </div>
