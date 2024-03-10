@@ -93,4 +93,6 @@ For a point $p \in S^2 \setminus \{N\}$, let $\varphi(p)$ denote the unique poin
   knitr::include_graphics('figures/ch1/fig04.jpg') 
 ```
 
-
+```{definition}
+If $X$ is a space, a point $x$ of $X$ is said to be an **isolated point** of $X$ if the one-point set $\{x\}$ is open in $X$.
+```

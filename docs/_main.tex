@@ -189,11 +189,18 @@ For a point \(p \in S^2 \setminus \{N\}\), let \(\varphi(p)\) denote the unique 
 \caption{\label{fig:fig04}\(~\)}
 \end{figure}
 
+\begin{definition}
+\protect\hypertarget{def:unnamed-chunk-6}{}\label{def:unnamed-chunk-6}
+
+If \(X\) is a space, a point \(x\) of \(X\) is said to be an \textbf{isolated point} of \(X\) if the one-point set \(\{x\}\) is open in \(X\).''\,```
+
 \hypertarget{manifolds}{%
 \chapter{Manifolds}\label{manifolds}}
 
 \hypertarget{topological-manifolds}{%
 \section{Topological Manifolds}\label{topological-manifolds}}
+
+\end{definition}
 
 \begin{definition}
 \protect\hypertarget{def:topmanifold}{}\label{def:topmanifold}
@@ -225,7 +232,7 @@ The first two conditions in the definition \ref{def:topmanifold} are more of a t
 Let's see some examples.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-7}{}\label{exm:unnamed-chunk-7}
+\protect\hypertarget{exm:unnamed-chunk-8}{}\label{exm:unnamed-chunk-8}
 
 Euclidean space \(M=\mathbb{R}^n\) itself is an \(n\)-dimensional topological manifold:
 
@@ -256,7 +263,7 @@ Euclidean space \(M=\mathbb{R}^n\) itself is an \(n\)-dimensional topological ma
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-8}{}\label{exm:unnamed-chunk-8}Let \(M \subset \mathbb{R}^n\) be an open subset. Then \(M\) is an \(n\)-dimensional topological manifold.\\
+\protect\hypertarget{exm:unnamed-chunk-9}{}\label{exm:unnamed-chunk-9}Let \(M \subset \mathbb{R}^n\) be an open subset. Then \(M\) is an \(n\)-dimensional topological manifold.\\
 (TM1), (TM2) Obvious.\\
 (TM3) Holds true with \(U = M\), \(V = M\) and \(x = \text{id}\).
 
@@ -264,7 +271,7 @@ Here Ia m not going to proove this. It is very similar to first example.
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-9}{}\label{exm:unnamed-chunk-9}The standard sphere \(M = S^n = \{ \underline{y}=(y^0,...,y^{n}) \in \mathbb{R}^{n+1} : ||\underline{y}|| = 1 \}\) is an \(n\)-dimensional topological manifold.
+\protect\hypertarget{exm:unnamed-chunk-10}{}\label{exm:unnamed-chunk-10}The standard sphere \(M = S^n = \{ \underline{y}=(y^0,...,y^{n}) \in \mathbb{R}^{n+1} : ||\underline{y}|| = 1 \}\) is an \(n\)-dimensional topological manifold.
 
 \begin{itemize}
 \tightlist
@@ -349,7 +356,7 @@ Therefore, \(n\)-sphere \(S^n\) is an \(n\)-dimensional topological manifold.
 \end{example}
 
 \begin{example}[Non-Example]
-\protect\hypertarget{exm:unnamed-chunk-10}{}\label{exm:unnamed-chunk-10}We consider \(M := \{ (y^1, y^2, y^3) \in \mathbb{R}^3 | (y^1)^2 = (y^2)^2 + (y^3)^2 \}\), the double cone.
+\protect\hypertarget{exm:unnamed-chunk-11}{}\label{exm:unnamed-chunk-11}We consider \(M := \{ (y^1, y^2, y^3) \in \mathbb{R}^3 | (y^1)^2 = (y^2)^2 + (y^3)^2 \}\), the double cone.
 
 Since \(M \subset \mathbb{R}^3\), both (i) and (ii) are satisfied.
 
@@ -361,14 +368,14 @@ Define the continuous path \(\tilde{c} := x^{-1} \circ c : [0, 1] \rightarrow U\
 \end{example}
 
 \begin{definition}[charts]
-\protect\hypertarget{def:unnamed-chunk-11}{}\label{def:unnamed-chunk-11}If \(M\) is an \(n\)-dimensional topological manifold, the homeomorphisms \(\varphi : U \to V\) are called charts (or local coordinate systems) of \(M\).
+\protect\hypertarget{def:unnamed-chunk-12}{}\label{def:unnamed-chunk-12}If \(M\) is an \(n\)-dimensional topological manifold, the homeomorphisms \(\varphi : U \to V\) are called charts (or local coordinate systems) of \(M\).
 \end{definition}
 
 \includegraphics{figures/ch1/fig06.jpg}
 After choosing a local coordinate system \(\varphi : U \rightarrow V\) every point \(p \in U\) is uniquely characterized by its coordinates \((\varphi^1(p), \ldots , \varphi^n(p))\).
 
 \begin{example}[0-dimesional manifold]
-\protect\hypertarget{exm:unnamed-chunk-12}{}\label{exm:unnamed-chunk-12}In a \(0\)-dimensional manifold \(M\) every point \(p \in M\) has an open neighborhood \(U\), which is homeomorphic to \(R^0 = \{0\}\). Consequently \(\{p\} = U\) is an open subset of \(M\) for all
+\protect\hypertarget{exm:unnamed-chunk-13}{}\label{exm:unnamed-chunk-13}In a \(0\)-dimensional manifold \(M\) every point \(p \in M\) has an open neighborhood \(U\), which is homeomorphic to \(R^0 = \{0\}\). Consequently \(\{p\} = U\) is an open subset of \(M\) for all
 \(p \in M\), that is, \(M\) carries the discrete topology. Since there exists a countable basis for the topology on \(M\) and the topology is discrete in addition, \(M\) has to be countable itself.
 \end{example}
 
@@ -379,7 +386,7 @@ After choosing a local coordinate system \(\varphi : U \rightarrow V\) every poi
 \end{figure}
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-13}{}\label{prp:unnamed-chunk-13}A topological space \(M\) is a 0-dimensional topological manifold, if and only if \(M\) is countable and carries the discrete topology.
+\protect\hypertarget{prp:unnamed-chunk-14}{}\label{prp:unnamed-chunk-14}A topological space \(M\) is a 0-dimensional topological manifold, if and only if \(M\) is countable and carries the discrete topology.
 \end{proposition}
 
 \begin{proof}
@@ -401,7 +408,7 @@ Therefore, a topological space \(M\) is a 0-dimensional topological manifold if 
 \end{proof}
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-15}{}\label{def:unnamed-chunk-15}A topological manifold \(M\) is said to be \textbf{connected}, if for every two points \(p, q \in M\) there exists a continuous map \(c : [0, 1] \to M\) with c(0) = p and c(1) = q.
+\protect\hypertarget{def:unnamed-chunk-16}{}\label{def:unnamed-chunk-16}A topological manifold \(M\) is said to be \textbf{connected}, if for every two points \(p, q \in M\) there exists a continuous map \(c : [0, 1] \to M\) with c(0) = p and c(1) = q.
 \end{definition}
 
 \begin{figure}

@@ -1,7 +1,8 @@
 ---
 output:
-  pdf_document: default
+  word_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Manifolds
@@ -183,7 +184,7 @@ Therefore, a topological space $M$ is a 0-dimensional topological manifold if an
 
 
 ```{definition}
-A topological manifold $M$ is said to be **connected**, if for every two points $p, q \in M$ there exists a continuous map $c : [0, 1] \to M$ with c(0) = p and c(1) = q.
+A topological manifold $M$ is said to be **connected**, if for every two points $p, q \in M$ there exists a continuous map $c : [0, 1] \to M$ with $c(0) = p$ and $c(1) = q$.
 ```
 
 
@@ -193,3 +194,7 @@ A topological manifold $M$ is said to be **connected**, if for every two points 
 
 Given two points, there has to be a continuous curve in $M$ which connects both. Usually, in Topology one calls this path-connected, which is in the case of manifolds equivalent to being connected. We do not want to go deeper into this subject at this point.
 
+
+```{r,echo=FALSE,fig.align='center',out.height = '460px', out.width='800px'}
+knitr::include_graphics('./pdf_docs/0DimesionalManifold.pdf')
+```
