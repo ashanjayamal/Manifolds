@@ -1,7 +1,7 @@
 ---
 output:
-  word_document: default
   html_document: default
+  word_document: default
   pdf_document: default
 ---
 
@@ -195,6 +195,4 @@ A topological manifold $M$ is said to be **connected**, if for every two points 
 Given two points, there has to be a continuous curve in $M$ which connects both. Usually, in Topology one calls this path-connected, which is in the case of manifolds equivalent to being connected. We do not want to go deeper into this subject at this point.
 
 
-```{r,echo=FALSE,fig.align='center',out.height = '460px', out.width='800px'}
-knitr::include_graphics('./pdf_docs/0DimesionalManifold.pdf')
-```
+

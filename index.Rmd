@@ -10,6 +10,7 @@ cover-image: figures/ch1/fig01.jpg
 description: |
   Lecture note ongoing seminar Manifolds
 link-citations: yes
+favicon: favicon_io/favicon.ico
 github-repo: rstudio/bookdown-demo
 ---
 
