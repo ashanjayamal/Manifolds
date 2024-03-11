@@ -23,13 +23,13 @@
 <meta name="author" content="Ashan Jayamal &amp; Nalamudu Samarasinghe" />
 
 
-<meta name="date" content="2024-03-10" />
+<meta name="date" content="2024-03-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="index.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -127,7 +127,7 @@ Figure 2.1: <span class="math inline">\(~\)</span>
 </div>
 <p>Let’s see some examples.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-2" class="example"><strong>Example 2.1  </strong></span>Euclidean space <span class="math inline">\(M=\mathbb{R}^n\)</span> itself is an <span class="math inline">\(n\)</span>-dimensional topological manifold:</p>
+<p><span id="exm:unnamed-chunk-8" class="example"><strong>Example 2.1  </strong></span>Euclidean space <span class="math inline">\(M=\mathbb{R}^n\)</span> itself is an <span class="math inline">\(n\)</span>-dimensional topological manifold:</p>
 <ul>
 <li>(TM1): We know that <span class="math inline">\(\mathbb{R}^n\)</span> is metrc space. Let’s say the metric as <span class="math inline">\(d\)</span>. Let <span class="math inline">\(x,y\in \mathbb{R}^n\)</span> with <span class="math inline">\(x\neq y\)</span>.
 Let <span class="math inline">\(r=d(x,y)\)</span>. Since <span class="math inline">\(x\neq y\)</span>,<span class="math inline">\(r&gt;0\)</span>.
@@ -146,31 +146,31 @@ So, Let <span class="math inline">\(U&#39;\subset U=\mathbb{R}^n\)</span> be an 
 </ul>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-3" class="example"><strong>Example 2.2  </strong></span>Let <span class="math inline">\(M \subset \mathbb{R}^n\)</span> be an open subset. Then <span class="math inline">\(M\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.<br />
+<p><span id="exm:unnamed-chunk-9" class="example"><strong>Example 2.2  </strong></span>Let <span class="math inline">\(M \subset \mathbb{R}^n\)</span> be an open subset. Then <span class="math inline">\(M\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.<br />
 (TM1), (TM2) Obvious.<br />
 (TM3) Holds true with <span class="math inline">\(U = M\)</span>, <span class="math inline">\(V = M\)</span> and <span class="math inline">\(x = \text{id}\)</span>.</p>
 <p>Here Ia m not going to proove this. It is very similar to first example.</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-4" class="example"><strong>Example 2.3  </strong></span>The standard sphere <span class="math inline">\(M = S^n = \{ \underline{y}=(y^0,...,y^{n}) \in \mathbb{R}^{n+1} : ||\underline{y}|| = 1 \}\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.</p>
+<p><span id="exm:unnamed-chunk-10" class="example"><strong>Example 2.3  </strong></span>The standard sphere <span class="math inline">\(M = S^n = \{ \underline{y}=(y^0,,.,y^{n}) \in \mathbb{R}^{n+1} : ||\underline{y}|| = 1 \}\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.</p>
 <ul>
 <li>(TM1) and (TM2) , since <span class="math inline">\(S^n\)</span> is a subset of <span class="math inline">\(\mathbb{R}^{n+1}\)</span>.</li>
-<li>(TM3) We construct two homeomorphisms with the help of the stereographic projection. Let <span class="math inline">\(N\)</span> be north pole of the n-sphere, that is <span class="math inline">\((\underbrace{0,...,0}_{n~times},1)\in \mathbb{R}^{n+1}\)</span>. Let <span class="math inline">\(U_1:=S^n\setminus \{N\}\)</span> and <span class="math inline">\(v_1=\mathbb{R}^{n+1}\)</span>. We define</li>
+<li>(TM3) We construct two homeomorphisms with the help of the stereographic projection. Let <span class="math inline">\(N\)</span> be north pole of the n-sphere, that is <span class="math inline">\((\underbrace{0,,.,0}_{n~times},1)\in \mathbb{R}^{n+1}\)</span>. Let <span class="math inline">\(U_1:=S^n\setminus \{N\}\)</span> and <span class="math inline">\(v_1=\mathbb{R}^{n+1}\)</span>. We define</li>
 </ul>
 <p><span class="math display">\[\begin{eqnarray}
 \varphi:U_1&amp;\to &amp; V_1\\
-\underline{y} =(y^0,y^1,...,y^n) &amp; \mapsto &amp; \frac{(y^0,y^1,...,y^n)}{1-y^{n+1}}
+\underline{y} =(y^0,y^1,,.,y^n) &amp; \mapsto &amp; \frac{(y^0,y^1,,.,y^n)}{1-y^{n+1}}
 \end{eqnarray}\]</span>
 - Cliam 1: <span class="math inline">\(varphi\)</span> is injective.<br />
-Let <span class="math inline">\((x^0,...,x^{n}),(y^0,y^1,...,y^n)\in \mathbb{R}^n\)</span>. Suppose that <span class="math inline">\(\varphi(x^0,...,x^{n})=\varphi(y^0,y^1,...,y^n)\)</span>.
+Let <span class="math inline">\((x^0,,.,x^{n}),(y^0,y^1,,.,y^n)\in \mathbb{R}^n\)</span>. Suppose that <span class="math inline">\(\varphi(x^0,,.,x^{n})=\varphi(y^0,y^1,,.,y^n)\)</span>.
 <span class="math display">\[\begin{eqnarray}
-\varphi(x^0,...,x^{n})&amp;=&amp;\varphi(y^0,y^1,...,y^n)\\
-\frac{(x^0,x^1,...,x^n)}{1-x^{n+1}}&amp;=&amp;\frac{(y^0,y^1,...,y^n)}{1-y^{n+1}}\\
-(y^0, y^1, ..., y^n)(1-x^{n+1}) &amp;=&amp; (x^0, x^1, ..., x^n)(1-y^{n+1})\\
-(y^0 - y^0x^{n+1}, y^1 - y^1x^{n+1}, ..., y^n - y^nx^{n+1}) &amp;=&amp; (x^0 - x^0y^{n+1}, x^1 - x^1y^{n+1}, ..., x^n - x^ny^{n+1})\\
-y^0(1 - x^{n+1}), y^1(1 - x^{n+1}), ..., y^n (1- y^nx^{n+1}) &amp;=&amp;  x^0(1-y^{n+1}), x^1(1 - y^{n+1}), ..., x^n (1- y^{n+1})\\
+\varphi(x^0,,.,x^{n})&amp;=&amp;\varphi(y^0,y^1,,.,y^n)\\
+\frac{(x^0,x^1,,.,x^n)}{1-x^{n+1}}&amp;=&amp;\frac{(y^0,y^1,,.,y^n)}{1-y^{n+1}}\\
+(y^0, y^1, ,., y^n)(1-x^{n+1}) &amp;=&amp; (x^0, x^1, ,., x^n)(1-y^{n+1})\\
+(y^0 - y^0x^{n+1}, y^1 - y^1x^{n+1}, ,., y^n - y^nx^{n+1}) &amp;=&amp; (x^0 - x^0y^{n+1}, x^1 - x^1y^{n+1}, ,., x^n - x^ny^{n+1})\\
+y^0(1 - x^{n+1}), y^1(1 - x^{n+1}), ,., y^n (1- y^nx^{n+1}) &amp;=&amp;  x^0(1-y^{n+1}), x^1(1 - y^{n+1}), ,., x^n (1- y^{n+1})\\
 \end{eqnarray}\]</span>
-Thus, <span class="math inline">\(y^i(1 - x^{n+1}) = x^i(1 -y^{n+1})\)</span> for all <span class="math inline">\(i = 0, 1, ..., n\)</span>.
+Thus, <span class="math inline">\(y^i(1 - x^{n+1}) = x^i(1 -y^{n+1})\)</span> for all <span class="math inline">\(i = 0, 1, ,., n\)</span>.
 Since <span class="math inline">\(1 - y^{n+1}, 1 - x^{n+1} &gt; 0\)</span>,
 ?</p>
 <p>?</p>
@@ -180,8 +180,8 @@ Since <span class="math inline">\(1 - y^{n+1}, 1 - x^{n+1} &gt; 0\)</span>,
 <p><span style="color:yellow">CHECK<strong>:(</strong></span>.<br />
 - Claim 2: <span class="math inline">\(\varphi\)</span> is surejctive. 
 Surjectivity means that for every <span class="math inline">\(\underline{v} \in V_1 = \mathbb{R}^n\)</span>, there exists some <span class="math inline">\(\underline{y} \in U_1\)</span> such that <span class="math inline">\(\varphi(\underline{y}) = \underline{v}\)</span>.</p>
-<p>So, let <span class="math inline">\(\underline{v} = (v^0, v^1, ..., v^n) \in V_1\)</span>. We need to find <span class="math inline">\(\underline{y} = (y^0, y^1, ..., y^n) \in U_1\)</span> such that</p>
-<p><span class="math display">\[\frac{(y^0, y^1, ..., y^n)}{1-y^{n+1}} = \underline{v}.\]</span></p>
+<p>So, let <span class="math inline">\(\underline{v} = (v^0, v^1, ,., v^n) \in V_1\)</span>. We need to find <span class="math inline">\(\underline{y} = (y^0, y^1, ,., y^n) \in U_1\)</span> such that</p>
+<p><span class="math display">\[\frac{(y^0, y^1, ,., y^n)}{1-y^{n+1}} = \underline{v}.\]</span></p>
 <p>We can solve this equation for <span class="math inline">\(\underline{y}\)</span> as follows:</p>
 <p><span class="math display">\[\underline{y} = (1-y^{n+1})\underline{v} = \underline{v} - y^{n+1}\underline{v}.\]</span></p>
 <p>We know that <span class="math inline">\(\underline{y} \in U_1 = S^n \setminus \{N\}\)</span>, so <span class="math inline">\(y^{n+1} = 1 - \|\underline{y}\|^2\)</span>. Substituting this into the equation gives us</p>
@@ -196,21 +196,21 @@ Surjectivity means that for every <span class="math inline">\(\underline{v} \in 
 Note that the inverse map <span class="math inline">\(\phi\)</span> is given by,
 <span class="math display">\[\begin{eqnarray}
 \phi : V_1 &amp;\rightarrow &amp; U_1\\
-\underline{x}= (x^0, x^1, ... , x^n) &amp;\mapsto &amp; \frac{(x^0,x^1,...,x^{n-1})}{1 + x^n}
+\underline{x}= (x^0, x^1, ,. , x^n) &amp;\mapsto &amp; \frac{(x^0,x^1,,.,x^{n-1})}{1 + x^n}
 \end{eqnarray}\]</span>
 <span style="color:yellow">I will update this proof. I want some to to write rigirs proof<strong>:(</strong></span>.</li>
 </ul>
 <p>Analogously, we define the homeomorphism, which omits the south pole:
-Let now <span class="math inline">\(U_2 := S^n \setminus \{S\}\)</span> with <span class="math inline">\(S := ( 0,... , 0, -1) \in \mathbb{R}^{n+1}\)</span> and <span class="math inline">\(V_2 := \mathbb{R}^n\)</span>.
+Let now <span class="math inline">\(U_2 := S^n \setminus \{S\}\)</span> with <span class="math inline">\(S := ( 0,,. , 0, -1) \in \mathbb{R}^{n+1}\)</span> and <span class="math inline">\(V_2 := \mathbb{R}^n\)</span>.
 Then
 <span class="math display">\[\begin{eqnarray}
 \varphi : U_2 &amp;\rightarrow &amp; V_2,\\
-\underline{y}= (y^0, y^1, ... , y^n) &amp;\mapsto &amp; \frac{(y^0,y^1,...,y^n)}{1 + y^n}
+\underline{y}= (y^0, y^1, ,. , y^n) &amp;\mapsto &amp; \frac{(y^0,y^1,,.,y^n)}{1 + y^n}
 \end{eqnarray}\]</span></p>
 <p>Therefore, <span class="math inline">\(n\)</span>-sphere <span class="math inline">\(S^n\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold.</p>
 </div>
 <div class="example">
-<p><span id="exm:unnamed-chunk-5" class="example"><strong>Example 2.4  (Non-Example) </strong></span>We consider <span class="math inline">\(M := \{ (y^1, y^2, y^3) \in \mathbb{R}^3 | (y^1)^2 = (y^2)^2 + (y^3)^2 \}\)</span>, the double cone.</p>
+<p><span id="exm:unnamed-chunk-11" class="example"><strong>Example 2.4  (Non-Example) </strong></span>We consider <span class="math inline">\(M := \{ (y^1, y^2, y^3) \in \mathbb{R}^3 | (y^1)^2 = (y^2)^2 + (y^3)^2 \}\)</span>, the double cone.</p>
 <p>Since <span class="math inline">\(M \subset \mathbb{R}^3\)</span>, both (i) and (ii) are satisfied.</p>
 <p>But <span class="math inline">\(M\)</span> is <strong>not</strong> a 2-dimensional manifold. Assume it were, then there would exist an open subset <span class="math inline">\(U \subset M\)</span> with <span class="math inline">\(0 \in U\)</span>, an open subset <span class="math inline">\(V \subset \mathbb{R}^2\)</span> and a homeomorphism <span class="math inline">\(\varphi : U \rightarrow V\)</span> with <span class="math inline">\(\varphi(0) = 0\)</span>.
 <span style="color:red">How do we Gruntee that such hormouphsim exsist that maps 0 to 0<strong>:(</strong></span>
@@ -218,7 +218,7 @@ Without losss of generality assume <span class="math inline">\(V = B_r(x(0))\)</
 <p>Define the continuous path <span class="math inline">\(\tilde{c} := x^{-1} \circ c : [0, 1] \rightarrow U\)</span>. Then <span class="math inline">\(\tilde{c}(0) = q_1\)</span>, <span class="math inline">\(\tilde{c}(1) = q_2\)</span>, that is, we have <span class="math inline">\(\tilde{c}_1(0) &gt; 0\)</span> while <span class="math inline">\(\tilde{c}_1(1) &lt; 0\)</span>. Applying the mean value theorem we find, that there exists a <span class="math inline">\(t \in (0, 1)\)</span> with <span class="math inline">\(\tilde{c}_1(t) = 0\)</span>. Then <span class="math inline">\(\tilde{c}(t) = (0, 0, 0)\)</span> and consequently <span class="math inline">\(c(t) = x(\tilde{c}(t)) = x(0)\)</span>, which contradicts the choice of <span class="math inline">\(c\)</span>. Hence, <span class="math inline">\(M\)</span> is not a 2-dimensional topological manifold.</p>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definition 2.2  (charts) </strong></span>If <span class="math inline">\(M\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold, the homeomorphisms <span class="math inline">\(\varphi : U \to V\)</span> are called charts (or local coordinate systems) of <span class="math inline">\(M\)</span>.</p>
+<p><span id="def:unnamed-chunk-12" class="definition"><strong>Definition 2.2  (charts) </strong></span>If <span class="math inline">\(M\)</span> is an <span class="math inline">\(n\)</span>-dimensional topological manifold, the homeomorphisms <span class="math inline">\(\varphi : U \to V\)</span> are called charts (or local coordinate systems) of <span class="math inline">\(M\)</span>.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig06"></span>
 <img src="figures/ch1/fig06.jpg" alt="$~$"  />
@@ -228,7 +228,7 @@ Figure 2.2: <span class="math inline">\(~\)</span>
 </div>
 <p>After choosing a local coordinate system <span class="math inline">\(\varphi : U \rightarrow V\)</span> every point <span class="math inline">\(p \in U\)</span> is uniquely characterized by its coordinates <span class="math inline">\((\varphi^1(p), \ldots , \varphi^n(p))\)</span>.</p>
 <div class="example">
-<p><span id="exm:unnamed-chunk-7" class="example"><strong>Example 2.5  (0-dimesional manifold) </strong></span>In a <span class="math inline">\(0\)</span>-dimensional manifold <span class="math inline">\(M\)</span> every point <span class="math inline">\(p \in M\)</span> has an open neighborhood <span class="math inline">\(U\)</span>, which is homeomorphic to <span class="math inline">\(R^0 = \{0\}\)</span>. Consequently <span class="math inline">\(\{p\} = U\)</span> is an open subset of <span class="math inline">\(M\)</span> for all
+<p><span id="exm:unnamed-chunk-13" class="example"><strong>Example 2.5  (0-dimesional manifold) </strong></span>In a <span class="math inline">\(0\)</span>-dimensional manifold <span class="math inline">\(M\)</span> every point <span class="math inline">\(p \in M\)</span> has an open neighborhood <span class="math inline">\(U\)</span>, which is homeomorphic to <span class="math inline">\(R^0 = \{0\}\)</span>. Consequently <span class="math inline">\(\{p\} = U\)</span> is an open subset of <span class="math inline">\(M\)</span> for all
 <span class="math inline">\(p \in M\)</span>, that is, <span class="math inline">\(M\)</span> carries the discrete topology. Since there exists a countable basis for the topology on <span class="math inline">\(M\)</span> and the topology is discrete in addition, <span class="math inline">\(M\)</span> has to be countable itself.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig07"></span>
@@ -238,7 +238,7 @@ Figure 2.3: <span class="math inline">\(~\)</span>
 </p>
 </div>
 <div class="proposition">
-<p><span id="prp:unnamed-chunk-8" class="proposition"><strong>Proposition 2.1  </strong></span>A topological space <span class="math inline">\(M\)</span> is a 0-dimensional topological manifold, if and only if <span class="math inline">\(M\)</span> is countable and carries the discrete topology.</p>
+<p><span id="prp:21" class="proposition"><strong>Proposition 2.1  </strong></span>A topological space <span class="math inline">\(M\)</span> is a 0-dimensional topological manifold, if and only if <span class="math inline">\(M\)</span> is countable and carries the discrete topology.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span></p>
@@ -251,7 +251,7 @@ Figure 2.3: <span class="math inline">\(~\)</span>
 <p>Therefore, a topological space <span class="math inline">\(M\)</span> is a 0-dimensional topological manifold if and only if <span class="math inline">\(M\)</span> is countable and carries the discrete topology.</p>
 </div>
 <div class="definition">
-<p><span id="def:unnamed-chunk-10" class="definition"><strong>Definition 2.3  </strong></span>A topological manifold <span class="math inline">\(M\)</span> is said to be <strong>connected</strong>, if for every two points <span class="math inline">\(p, q \in M\)</span> there exists a continuous map <span class="math inline">\(c : [0, 1] \to M\)</span> with <span class="math inline">\(c(0) = p\)</span> and <span class="math inline">\(c(1) = q\)</span>.</p>
+<p><span id="def:unnamed-chunk-15" class="definition"><strong>Definition 2.3  </strong></span>A topological manifold <span class="math inline">\(M\)</span> is said to be <strong>connected</strong>, if for every two points <span class="math inline">\(p, q \in M\)</span> there exists a continuous map <span class="math inline">\(c : [0, 1] \to M\)</span> with <span class="math inline">\(c(0) = p\)</span> and <span class="math inline">\(c(1) = q\)</span>.</p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:fig08"></span>
 <img src="figures/ch1/fig08.png" alt="$~$"  />
@@ -260,7 +260,123 @@ Figure 2.4: <span class="math inline">\(~\)</span>
 </p>
 </div>
 <p>Given two points, there has to be a continuous curve in <span class="math inline">\(M\)</span> which connects both. Usually, in Topology one calls this path-connected, which is in the case of manifolds equivalent to being connected. We do not want to go deeper into this subject at this point.</p>
-<embed src="./pdf_docs/0DimesionalManifold.pdf" width="800px" height="460px" style="display: block; margin: auto;" type="application/pdf" />
+<div class="remark">
+<p><span id="unlabeled-div-3" class="remark"><em>Remark</em>. </span>Following Proposition every connected 0-dimensional manifold <span class="math inline">\(M\)</span>
+is given by a single point: <span class="math inline">\(M = \{\text{point}\}\)</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(M\)</span> be 0-dimesional connected manifold. Then by proposition<a href="manifolds.html#prp:21">2.1</a> <span class="math inline">\(M\)</span> carries the discreate topology. Let <span class="math inline">\(p,q\)</span> be distinct points. (i.e. <span class="math inline">\(p\neq q\)</span>). Since <span class="math inline">\(M\)</span> is connected that there exist continuous map <span class="math inline">\(c:[0,1]\to M\)</span> such that <span class="math inline">\(c(0)=p\)</span> and <span class="math inline">\(c(1)=q\)</span>.</p>
+<p>Let <span class="math inline">\(U=c^{-1}(\{p\})\)</span>. Since <span class="math inline">\(\{p\}\)</span> is open in <span class="math inline">\(M\)</span> under discreate toplogy and <span class="math inline">\(c\)</span> is continuous, <span class="math inline">\(U\)</span> is open in <span class="math inline">\([0,1]\)</span> under subspace topology.</p>
+<p>Note that <span class="math inline">\(M\setminus \{p\}\)</span> is sub set of <span class="math inline">\(M\)</span>. So, that is open under discreate topology. Since, <span class="math inline">\(c\)</span> is continuous, <span class="math inline">\(V=c^{-1}(M\setminus \{p\})\)</span> is open in <span class="math inline">\([0,1]\)</span> under subspace topology.</p>
+<ul>
+<li><p><strong>Claim 1</strong>: <span class="math inline">\(V \cap U = \emptyset\)</span><br />
+<span class="math display">\[\begin{eqnarray}
+V \cap U &amp;=&amp; c^{-1}(M\setminus \{p\}) \bigcap c^{-1}(\{p\})\\
+&amp;=&amp; c^{-1}(M\setminus \{p\} \cap \{p\}~~(\text{by Claim 3})\\
+&amp;=&amp; c^{-1}(\emptyset)~~(\text{by Claim 4})\\
+&amp;=&amp; \emptyset
+\end{eqnarray}\]</span></p></li>
+<li><p><strong>Claim 2</strong>: <span class="math inline">\(V \cup U = [0,1]\)</span><br />
+<span class="math display">\[\begin{eqnarray}
+V \cup U &amp;=&amp; c^{-1}(M\setminus \{p\}) \bigcup c^{-1}(\{p\})\\
+&amp;=&amp; c^{-1}(M\setminus \{p\} \cup \{p\}~~(\text{by Claim 5})\\
+&amp;=&amp; c^{-1}(M)\\
+&amp;=&amp; [0,1]  ~~(\text{by Claim 6})
+\end{eqnarray}\]</span></p></li>
+<li><p><strong>Claim 3</strong>: <span class="math inline">\(c^{-1}(U_1\cap U_2)= c^{-1}(U_1)\cap c^{-1}(U_2)\)</span><br />
+</p>
+<ul>
+<li><em>subclaim 3.1</em> : <span class="math inline">\(c^{-1}(U_1\cap U_2)\subseteq c^{-1}(U_1)\cap c^{-1}(U_2)\)</span><br />
+Let <span class="math inline">\(y\in c^{-1}(U_1\cap U_2)\)</span>. Then, <span class="math inline">\(c(y)\in U_1\cap U_2\)</span>. Thus, <span class="math inline">\(c(y)\in U_1\)</span> and <span class="math inline">\(c(y)\in U_2\)</span>. So, <span class="math inline">\(\in c^{-1}(U_1)\)</span> and <span class="math inline">\(y\in c^{-1}(U_2)\)</span>. Thus, <span class="math inline">\(y \in c^{-1}(U_1)\cap c^{-1}(U_2)\)</span>. Therefore, <span class="math inline">\(c^{-1}(U_1\cap U_2)\subseteq c^{-1}(U_1)\cap c^{-1}(U_2)\)</span>.</li>
+<li><em>subclaim 3.2</em> : <span class="math inline">\(c^{-1}(U_1\cap U_2)\supseteq c^{-1}(U_1)\cap c^{-1}(U_2)\)</span><br />
+Let <span class="math inline">\(x\in c^{-1}(U_1)\cap c^{-1}(U_2)\)</span>. Then, <span class="math inline">\(x \in c^{-1}(U_1)\)</span> and <span class="math inline">\(x\in c^{-1}(U_2)\)</span>. Thus, <span class="math inline">\(c(x)\in U_1\)</span> and <span class="math inline">\(c(x)\in U_2\)</span>. So, <span class="math inline">\(x\in c^{-1}(U_1)\)</span> and <span class="math inline">\(x\in c^{-1}(U_2)\)</span>. <span class="math inline">\(c(x)\in U_1\cap U_2\)</span>. Therefore, <span class="math inline">\(c^{-1}(U_1\cap U_2)\supseteq c^{-1}(U_1)\cap c^{-1}(U_2)\)</span>.
+Therfore <span class="math inline">\(c^{-1}(U_1\cap U_2)= c^{-1}(U_1)\cap c^{-1}(U_2)\)</span>.</li>
+</ul></li>
+<li><p><strong>Claim 4</strong>: <span class="math inline">\(c^{-1}(\emptyset)=\emptyset\)</span>.<br />
+Assume the contray, <span class="math inline">\(c^{-1}(\emptyset)\neq \emptyset\)</span>. Then we can choose that <span class="math inline">\(x\in c^{-1}(\emptyset)\)</span>. Thus, <span class="math inline">\(c(x)\in\emptyset\)</span>. This is a contardiction. Therefore, <span class="math inline">\(c^{-1}(\emptyset)\)</span></p></li>
+<li><p><strong>Claim 5</strong>: <span class="math inline">\(c^{-1}(U_1\cup U_2)= c^{-1}(U_1)\cup c^{-1}(U_2)\)</span>.<br />
+</p>
+<ul>
+<li><em>subclaim 5.1</em> : <span class="math inline">\(c^{-1}(U_1\cup U_2)\subseteq c^{-1}(U_1)\cup c^{-1}(U_2)\)</span><br />
+Let <span class="math inline">\(y\in c^{-1}(U_1\cup U_2)\)</span>. Then, <span class="math inline">\(c(y)\in U_1\cup U_2\)</span>. Thus, <span class="math inline">\(c(y)\in U_1\)</span> or <span class="math inline">\(c(y)\in U_2\)</span>. So, <span class="math inline">\(\in c^{-1}(U_1)\)</span> or <span class="math inline">\(y\in c^{-1}(U_2)\)</span>. Thus, <span class="math inline">\(y \in c^{-1}(U_1)\cup c^{-1}(U_2)\)</span>. Therefore, <span class="math inline">\(c^{-1}(U_1\cup U_2)\subseteq c^{-1}(U_1)\cup c^{-1}(U_2)\)</span>.</li>
+<li><em>subclaim 5.2</em> : <span class="math inline">\(c^{-1}(U_1\cup U_2)\supseteq c^{-1}(U_1)\cup c^{-1}(U_2)\)</span><br />
+Let <span class="math inline">\(x\in c^{-1}(U_1)\cup c^{-1}(U_2)\)</span>. Then, <span class="math inline">\(x \in c^{-1}(U_1)\)</span> or <span class="math inline">\(x\in c^{-1}(U_2)\)</span>. Thus, <span class="math inline">\(c(x)\in U_1\)</span> or <span class="math inline">\(c(x)\in U_2\)</span>. So, <span class="math inline">\(x\in c^{-1}(U_1)\)</span> or <span class="math inline">\(x\in c^{-1}(U_2)\)</span>. <span class="math inline">\(c(x)\in U_1\cup U_2\)</span>. Therefore, <span class="math inline">\(c^{-1}(U_1\cup U_2)\supseteq c^{-1}(U_1)\cup c^{-1}(U_2)\)</span>.
+Therfore <span class="math inline">\(c^{-1}(U_1\cup U_2)= c^{-1}(U_1)\cup c^{-1}(U_2)\)</span>.</li>
+</ul></li>
+<li><p><strong>Claim 6</strong>: If <span class="math inline">\(c:[0,1]\to M\)</span> be continuous map such that <span class="math inline">\(c(0)=p,c(1)=q\)</span>, then <span class="math inline">\([0,1]=c^{-1}(M)\)</span>\
+Recall the definition of pre image of <span class="math inline">\(M\)</span>.
+<span class="math display">\[c^{-1}(M):=\{x\in M | c(x)\in M\}\]</span></p>
+<ul>
+<li><p><em>Subclaim 6.1</em>: <span class="math inline">\([0,1]\subseteq c^{-1}(M)\)</span>.<br />
+Let <span class="math inline">\(a\in [0,1]\)</span>. Then <span class="math inline">\(c(a)\in M\)</span>. Thus, <span class="math inline">\(a\in c^{-1}(M)\)</span>. Hence, <span class="math inline">\([0,1]\subseteq c^{-1}(M)\)</span>. Thus, <span class="math inline">\(a\in c^{-1}(M)\)</span>.</p></li>
+<li><p><em>Subcliam 6.2</em>: <span class="math inline">\([0,1]\supseteq c^{-1}(M)\)</span>.<br />
+Let <span class="math inline">\(b\in c^{-1}(M)\)</span>. So, <span class="math inline">\([0,1]\subseteq c^{-1}(M)\)</span>. Thus, <span class="math inline">\(b\in c^{-1}(M)\)</span>. Hence <span class="math inline">\(c(b)\in M\)</span>. Thus, <span class="math inline">\(b\in [0,1]\)</span>.</p></li>
+</ul></li>
+<li><p><strong>Claim 7</strong> : <span class="math inline">\(V\neq \emptyset\)</span>.<br />
+Since <span class="math inline">\(p\neq q\)</span> and <span class="math inline">\(q=c(1)\)</span>, then <span class="math inline">\(1\not\in c^{-1}(\{p\})=U\)</span>. Thus, <span class="math inline">\(1\in V=[0,1]\setminus U\)</span>. Therefore, <span class="math inline">\(V\neq \emptyset\)</span>.</p></li>
+<li><p><strong>Claim 8</strong>: <span class="math inline">\([0,1]\)</span> is connected.<br />
+We are going to use proof by contradiction.
+Suppose that <span class="math inline">\(A,B\)</span> is a separation of <span class="math inline">\([0,1]\)</span>.
+Let <span class="math inline">\(a \in A\)</span>, <span class="math inline">\(b \in B\)</span>.
+Without loss of generality, suppose that <span class="math inline">\(a &lt; b\)</span>.
+Since <span class="math inline">\(a, b \in [0,1]\)</span>, and <span class="math inline">\([0,1]\)</span> is an interval, <span class="math inline">\([a,b] \subseteq [0,1]\)</span>. Let <span class="math inline">\(A&#39; = A \cap [a,b]\)</span> and <span class="math inline">\(B&#39; = B \cap [a,b]\)</span>.Then,
+<span class="math display">\[\begin{align*}
+A&#39; \cup B&#39; &amp;= (A \cap [a,b]) \cup (B \cap [a,b]) \\
+&amp;= (A \cup B) \cap [a,b] \quad \text{(Intersection Distributes over Union)} \\
+&amp;= [a,b] \quad \text{(Intersection with Subset is Subset)}
+\end{align*}\]</span>
+By the definition of a separation, both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are closed in <span class="math inline">\([0,1]\)</span>.
+Hence by Closed Set in Topological Subspace, <span class="math inline">\(A&#39;\)</span> and <span class="math inline">\(B&#39;\)</span> are also closed in <span class="math inline">\([a,b]\)</span>.
+From Closed Set in Topological Subspace: Corollary, <span class="math inline">\(A&#39;\)</span> and <span class="math inline">\(B&#39;\)</span> are closed in <span class="math inline">\(\mathbb{R}\)</span>.
+Now, since <span class="math inline">\(B&#39; \neq \emptyset\)</span>, and <span class="math inline">\(B\)</span> is bounded below (by, for example, <span class="math inline">\(a\)</span>), by the Continuum Property <span class="math inline">\(b&#39; := \inf(B&#39;)\)</span> exists, and <span class="math inline">\(b&#39; \geq a\)</span>.
+We have that <span class="math inline">\(B&#39;\)</span> is closed in <span class="math inline">\(\mathbb{R}\)</span>.
+Hence from Closure of Real Interval is Closed Real Interval, <span class="math inline">\(b&#39; \in B&#39;\)</span>.
+Since <span class="math inline">\(a \in A&#39;\)</span> and <span class="math inline">\(A \cap B = \emptyset\)</span>, it follows that <span class="math inline">\(b&#39; &gt; a\)</span>.
+Now let <span class="math inline">\(A&#39;&#39; = A&#39; \cap [a,b&#39;]\)</span>.
+Using the same argument as for <span class="math inline">\(B&#39;\)</span>, we have that <span class="math inline">\(a&#39;&#39; = \sup(A&#39;&#39;)\)</span> exists, that <span class="math inline">\(a&#39;&#39; \in A&#39;&#39;\)</span> and also <span class="math inline">\(a&#39;&#39; &lt; b&#39;\)</span>.
+Now <span class="math inline">\((a&#39;&#39;,b&#39;) \cap A&#39; = \emptyset\)</span> or <span class="math inline">\(a&#39;&#39;\)</span> would not be an upper bound for <span class="math inline">\(A&#39;&#39;\)</span>.
+Similarly, <span class="math inline">\((a&#39;&#39;,b&#39;) \cap B&#39; = \emptyset\)</span> or <span class="math inline">\(b&#39;\)</span> would not be a lower bound for <span class="math inline">\(B&#39;&#39;\)</span>.
+Thus, <span class="math inline">\((a&#39;&#39;,b&#39;) \cap (A&#39; \cup B&#39;) = \emptyset\)</span>.
+But since <span class="math inline">\(a &lt; a&#39;&#39; &lt; b&#39; &lt; b\)</span>, we also have <span class="math inline">\((a&#39;&#39;,b&#39;) \subseteq [a,b]\)</span>, and <span class="math inline">\((a&#39;&#39;,b&#39;)\)</span> is non-empty.
+So, there is an element <span class="math inline">\(z \in (a&#39;&#39;,b&#39;)\)</span>, and hence in <span class="math inline">\([a,b]\)</span>, which is not in <span class="math inline">\(A&#39; \cup B&#39;\)</span>.
+This contradicts (1) above, which says that we have <span class="math inline">\(A&#39; \cup B&#39; = [a,b]\)</span>.
+From this contradiction it follows that there can be no such separation <span class="math inline">\(A \mid B\)</span> on the interval <span class="math inline">\([0,1]\)</span>.
+Therefore, by definition, <span class="math inline">\([0,1]\)</span> is connected.</p></li>
+</ul>
+<p>By claim 1,2 and 7, <span class="math inline">\(U,V\)</span> are separation of <span class="math inline">\([0,1]\)</span>. This is contartract the the connectedness of <span class="math inline">\([0,1]\)</span> interval.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-18" class="proposition"><strong>Proposition 2.2  </strong></span>Every connected <span class="math inline">\(1\)</span>-dimensional topological manifold is homeomorphic to <span class="math inline">\(\mathbb{R}\)</span> or to <span class="math inline">\(S^1\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span>Hard</p>
+</div>
+<p>The only compact,connected topological manifold of dimension <span class="math inline">\(1\)</span> is <span class="math inline">\(S^1\)</span></p>
+<div class="theorem">
+<p><span id="thm:unnamed-chunk-20" class="theorem"><strong>Theorem 2.1  </strong></span>Let <span class="math inline">\(M\)</span> and <span class="math inline">\(A\)</span> be sets. For all <span class="math inline">\(\alpha \in A\)</span> assume that <span class="math inline">\(U_\alpha \subset M\)</span> and <span class="math inline">\(V_\alpha \subset \mathbb{R}^n\)</span> are subsets and that <span class="math inline">\(\varphi_\alpha : U_\alpha \rightarrow V_\alpha\)</span> are bijective maps. Suppose the following holds:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\bigcup_{\alpha \in A} U_\alpha = M\)</span>,</p></li>
+<li><p><span class="math inline">\(\varphi_\alpha(U_\alpha \cap U_\beta) \subset \mathbb{R}^n\)</span> is open for all <span class="math inline">\(\alpha, \beta \in A\)</span> and</p></li>
+<li><p><span class="math inline">\(\varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \rightarrow \varphi_\beta(U_\alpha \cap U_\beta)\)</span> is continuous for all <span class="math inline">\(\alpha, \beta \in A\)</span>.</p></li>
+</ol>
+<p>Then <span class="math inline">\(M\)</span> carries a unique topology for which all <span class="math inline">\(U_\alpha\)</span> are open sets and all <span class="math inline">\(\varphi_\alpha\)</span> are homeomorphisms.</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:fig09"></span>
+<img src="figures/ch1/fig09.png" alt="$~$"  />
+<p class="caption">
+Figure 2.5: <span class="math inline">\(~\)</span>
+</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>We first show <em>uniqueness</em>:<br />
+Let <span class="math inline">\(\mathcal{T}\)</span> be a topology on <span class="math inline">\(M\)</span> containing the <span class="math inline">\(U_\alpha\)</span> and such that the <span class="math inline">\(\varphi_\alpha\)</span> are homeomorphisms.
+If <span class="math inline">\(W \in \mathcal{T}\)</span>, then also <span class="math inline">\(W \cap U_\alpha \in \mathcal{T}\)</span> and <span class="math inline">\(\varphi_\alpha(W \cap U_\alpha)\)</span> is open for all <span class="math inline">\(\alpha \in A\)</span>.
+Conversely, if <span class="math inline">\(W \subset M\)</span> is a subset such that <span class="math inline">\(\varphi_\alpha(W \cap U_\alpha) \subset \mathbb{R}^n\)</span> is open for all <span class="math inline">\(\alpha \in A\)</span>, then
+<span class="math inline">\(W \cap U_\alpha\)</span> is also open in <span class="math inline">\(U_\alpha\)</span> for all <span class="math inline">\(\alpha\)</span>. Since <span class="math inline">\(U_\alpha\)</span> is open in <span class="math inline">\(M\)</span>, the set <span class="math inline">\(W \cap U_\alpha\)</span> is open in <span class="math inline">\(M\)</span>.
+By (i), <span class="math inline">\(W = \bigcup_{\alpha \in A} (W \cap U_\alpha)\)</span> is also open in <span class="math inline">\(M\)</span>. We have shown that <span class="math inline">\(W \in \mathcal{T}\)</span> if and only
+if <span class="math inline">\(\varphi_\alpha(W \cap U_\alpha)\)</span> is open in <span class="math inline">\(\mathbb{R}^n\)</span> for all <span class="math inline">\(\alpha\)</span>,
+<span class="math display">\[\mathcal{T} = \{W \subset M :~ \varphi_\alpha(W \cap U_\alpha) \subset \mathbb{R}^n \text{ is open for all } \alpha \in A\}\]</span>.</p>
+</div>
 
 </div>
 </div>

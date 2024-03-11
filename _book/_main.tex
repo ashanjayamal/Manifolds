@@ -80,7 +80,7 @@
 
 \title{Manifolds}
 \author{Ashan Jayamal \& Nalamudu Samarasinghe}
-\date{2024-03-10}
+\date{2024-03-11}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -268,30 +268,30 @@ Here Ia m not going to proove this. It is very similar to first example.
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-10}{}\label{exm:unnamed-chunk-10}The standard sphere \(M = S^n = \{ \underline{y}=(y^0,...,y^{n}) \in \mathbb{R}^{n+1} : ||\underline{y}|| = 1 \}\) is an \(n\)-dimensional topological manifold.
+\protect\hypertarget{exm:unnamed-chunk-10}{}\label{exm:unnamed-chunk-10}The standard sphere \(M = S^n = \{ \underline{y}=(y^0,,.,y^{n}) \in \mathbb{R}^{n+1} : ||\underline{y}|| = 1 \}\) is an \(n\)-dimensional topological manifold.
 
 \begin{itemize}
 \tightlist
 \item
   (TM1) and (TM2) , since \(S^n\) is a subset of \(\mathbb{R}^{n+1}\).
 \item
-  (TM3) We construct two homeomorphisms with the help of the stereographic projection. Let \(N\) be north pole of the n-sphere, that is \((\underbrace{0,...,0}_{n~times},1)\in \mathbb{R}^{n+1}\). Let \(U_1:=S^n\setminus \{N\}\) and \(v_1=\mathbb{R}^{n+1}\). We define
+  (TM3) We construct two homeomorphisms with the help of the stereographic projection. Let \(N\) be north pole of the n-sphere, that is \((\underbrace{0,,.,0}_{n~times},1)\in \mathbb{R}^{n+1}\). Let \(U_1:=S^n\setminus \{N\}\) and \(v_1=\mathbb{R}^{n+1}\). We define
 \end{itemize}
 
 \begin{eqnarray}
 \varphi:U_1&\to & V_1\\
-\underline{y} =(y^0,y^1,...,y^n) & \mapsto & \frac{(y^0,y^1,...,y^n)}{1-y^{n+1}}
+\underline{y} =(y^0,y^1,,.,y^n) & \mapsto & \frac{(y^0,y^1,,.,y^n)}{1-y^{n+1}}
 \end{eqnarray}
 - Cliam 1: \(varphi\) is injective.\\
-Let \((x^0,...,x^{n}),(y^0,y^1,...,y^n)\in \mathbb{R}^n\). Suppose that \(\varphi(x^0,...,x^{n})=\varphi(y^0,y^1,...,y^n)\).
+Let \((x^0,,.,x^{n}),(y^0,y^1,,.,y^n)\in \mathbb{R}^n\). Suppose that \(\varphi(x^0,,.,x^{n})=\varphi(y^0,y^1,,.,y^n)\).
 \begin{eqnarray}
-\varphi(x^0,...,x^{n})&=&\varphi(y^0,y^1,...,y^n)\\
-\frac{(x^0,x^1,...,x^n)}{1-x^{n+1}}&=&\frac{(y^0,y^1,...,y^n)}{1-y^{n+1}}\\
-(y^0, y^1, ..., y^n)(1-x^{n+1}) &=& (x^0, x^1, ..., x^n)(1-y^{n+1})\\
-(y^0 - y^0x^{n+1}, y^1 - y^1x^{n+1}, ..., y^n - y^nx^{n+1}) &=& (x^0 - x^0y^{n+1}, x^1 - x^1y^{n+1}, ..., x^n - x^ny^{n+1})\\
-y^0(1 - x^{n+1}), y^1(1 - x^{n+1}), ..., y^n (1- y^nx^{n+1}) &=&  x^0(1-y^{n+1}), x^1(1 - y^{n+1}), ..., x^n (1- y^{n+1})\\
+\varphi(x^0,,.,x^{n})&=&\varphi(y^0,y^1,,.,y^n)\\
+\frac{(x^0,x^1,,.,x^n)}{1-x^{n+1}}&=&\frac{(y^0,y^1,,.,y^n)}{1-y^{n+1}}\\
+(y^0, y^1, ,., y^n)(1-x^{n+1}) &=& (x^0, x^1, ,., x^n)(1-y^{n+1})\\
+(y^0 - y^0x^{n+1}, y^1 - y^1x^{n+1}, ,., y^n - y^nx^{n+1}) &=& (x^0 - x^0y^{n+1}, x^1 - x^1y^{n+1}, ,., x^n - x^ny^{n+1})\\
+y^0(1 - x^{n+1}), y^1(1 - x^{n+1}), ,., y^n (1- y^nx^{n+1}) &=&  x^0(1-y^{n+1}), x^1(1 - y^{n+1}), ,., x^n (1- y^{n+1})\\
 \end{eqnarray}
-Thus, \(y^i(1 - x^{n+1}) = x^i(1 -y^{n+1})\) for all \(i = 0, 1, ..., n\).
+Thus, \(y^i(1 - x^{n+1}) = x^i(1 -y^{n+1})\) for all \(i = 0, 1, ,., n\).
 Since \(1 - y^{n+1}, 1 - x^{n+1} > 0\),
 ?
 
@@ -307,9 +307,9 @@ Since \(1 - y^{n+1}, 1 - x^{n+1} > 0\),
 - Claim 2: \(\varphi\) is surejctive.~
 Surjectivity means that for every \(\underline{v} \in V_1 = \mathbb{R}^n\), there exists some \(\underline{y} \in U_1\) such that \(\varphi(\underline{y}) = \underline{v}\).
 
-So, let \(\underline{v} = (v^0, v^1, ..., v^n) \in V_1\). We need to find \(\underline{y} = (y^0, y^1, ..., y^n) \in U_1\) such that
+So, let \(\underline{v} = (v^0, v^1, ,., v^n) \in V_1\). We need to find \(\underline{y} = (y^0, y^1, ,., y^n) \in U_1\) such that
 
-\[\frac{(y^0, y^1, ..., y^n)}{1-y^{n+1}} = \underline{v}.\]
+\[\frac{(y^0, y^1, ,., y^n)}{1-y^{n+1}} = \underline{v}.\]
 
 We can solve this equation for \(\underline{y}\) as follows:
 
@@ -336,17 +336,17 @@ This is a well-defined point in \(U_1\) for every \(\underline{v} \in V_1\), so 
   Note that the inverse map \(\phi\) is given by,
   \begin{eqnarray}
   \phi : V_1 &\rightarrow & U_1\\
-  \underline{x}= (x^0, x^1, ... , x^n) &\mapsto & \frac{(x^0,x^1,...,x^{n-1})}{1 + x^n} 
+  \underline{x}= (x^0, x^1, ,. , x^n) &\mapsto & \frac{(x^0,x^1,,.,x^{n-1})}{1 + x^n} 
   \end{eqnarray}
   {I will update this proof. I want some to to write rigirs proof\textbf{:(}}.
 \end{itemize}
 
 Analogously, we define the homeomorphism, which omits the south pole:
-Let now \(U_2 := S^n \setminus \{S\}\) with \(S := ( 0,... , 0, -1) \in \mathbb{R}^{n+1}\) and \(V_2 := \mathbb{R}^n\).
+Let now \(U_2 := S^n \setminus \{S\}\) with \(S := ( 0,,. , 0, -1) \in \mathbb{R}^{n+1}\) and \(V_2 := \mathbb{R}^n\).
 Then
 \begin{eqnarray}
 \varphi : U_2 &\rightarrow & V_2,\\
-\underline{y}= (y^0, y^1, ... , y^n) &\mapsto & \frac{(y^0,y^1,...,y^n)}{1 + y^n} 
+\underline{y}= (y^0, y^1, ,. , y^n) &\mapsto & \frac{(y^0,y^1,,.,y^n)}{1 + y^n} 
 \end{eqnarray}
 
 Therefore, \(n\)-sphere \(S^n\) is an \(n\)-dimensional topological manifold.
@@ -383,7 +383,7 @@ After choosing a local coordinate system \(\varphi : U \rightarrow V\) every poi
 \end{figure}
 
 \begin{proposition}
-\protect\hypertarget{prp:unnamed-chunk-14}{}\label{prp:unnamed-chunk-14}A topological space \(M\) is a 0-dimensional topological manifold, if and only if \(M\) is countable and carries the discrete topology.
+\protect\hypertarget{prp:21}{}\label{prp:21}A topological space \(M\) is a 0-dimensional topological manifold, if and only if \(M\) is countable and carries the discrete topology.
 \end{proposition}
 
 \begin{proof}
@@ -405,7 +405,7 @@ Therefore, a topological space \(M\) is a 0-dimensional topological manifold if 
 \end{proof}
 
 \begin{definition}
-\protect\hypertarget{def:unnamed-chunk-16}{}\label{def:unnamed-chunk-16}A topological manifold \(M\) is said to be \textbf{connected}, if for every two points \(p, q \in M\) there exists a continuous map \(c : [0, 1] \to M\) with \(c(0) = p\) and \(c(1) = q\).
+\protect\hypertarget{def:unnamed-chunk-15}{}\label{def:unnamed-chunk-15}A topological manifold \(M\) is said to be \textbf{connected}, if for every two points \(p, q \in M\) there exists a continuous map \(c : [0, 1] \to M\) with \(c(0) = p\) and \(c(1) = q\).
 \end{definition}
 
 \begin{figure}
@@ -415,6 +415,157 @@ Therefore, a topological space \(M\) is a 0-dimensional topological manifold if 
 \end{figure}
 
 Given two points, there has to be a continuous curve in \(M\) which connects both. Usually, in Topology one calls this path-connected, which is in the case of manifolds equivalent to being connected. We do not want to go deeper into this subject at this point.
+
+\begin{remark}
+Following Proposition every connected 0-dimensional manifold \(M\)
+is given by a single point: \(M = \{\text{point}\}\)
+\end{remark}
+
+\begin{proof}
+Let \(M\) be 0-dimesional connected manifold. Then by proposition\ref{prp:21} \(M\) carries the discreate topology. Let \(p,q\) be distinct points. (i.e.~\(p\neq q\)). Since \(M\) is connected that there exist continuous map \(c:[0,1]\to M\) such that \(c(0)=p\) and \(c(1)=q\).
+
+Let \(U=c^{-1}(\{p\})\). Since \(\{p\}\) is open in \(M\) under discreate toplogy and \(c\) is continuous, \(U\) is open in \([0,1]\) under subspace topology.
+
+Note that \(M\setminus \{p\}\) is sub set of \(M\). So, that is open under discreate topology. Since, \(c\) is continuous, \(V=c^{-1}(M\setminus \{p\})\) is open in \([0,1]\) under subspace topology.
+
+\begin{itemize}
+\item
+  \textbf{Claim 1}: \(V \cap U = \emptyset\)\\
+  \begin{eqnarray}
+  V \cap U &=& c^{-1}(M\setminus \{p\}) \bigcap c^{-1}(\{p\})\\
+  &=& c^{-1}(M\setminus \{p\} \cap \{p\}~~(\text{by Claim 3})\\
+  &=& c^{-1}(\emptyset)~~(\text{by Claim 4})\\
+  &=& \emptyset
+  \end{eqnarray}
+\item
+  \textbf{Claim 2}: \(V \cup U = [0,1]\)\\
+  \begin{eqnarray}
+  V \cup U &=& c^{-1}(M\setminus \{p\}) \bigcup c^{-1}(\{p\})\\
+  &=& c^{-1}(M\setminus \{p\} \cup \{p\}~~(\text{by Claim 5})\\
+  &=& c^{-1}(M)\\
+  &=& [0,1]  ~~(\text{by Claim 6})
+  \end{eqnarray}
+\item
+  \textbf{Claim 3}: \(c^{-1}(U_1\cap U_2)= c^{-1}(U_1)\cap c^{-1}(U_2)\)\\
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{subclaim 3.1} : \(c^{-1}(U_1\cap U_2)\subseteq c^{-1}(U_1)\cap c^{-1}(U_2)\)\\
+    Let \(y\in c^{-1}(U_1\cap U_2)\). Then, \(c(y)\in U_1\cap U_2\). Thus, \(c(y)\in U_1\) and \(c(y)\in U_2\). So, \(\in c^{-1}(U_1)\) and \(y\in c^{-1}(U_2)\). Thus, \(y \in c^{-1}(U_1)\cap c^{-1}(U_2)\). Therefore, \(c^{-1}(U_1\cap U_2)\subseteq c^{-1}(U_1)\cap c^{-1}(U_2)\).
+  \item
+    \emph{subclaim 3.2} : \(c^{-1}(U_1\cap U_2)\supseteq c^{-1}(U_1)\cap c^{-1}(U_2)\)\\
+    Let \(x\in c^{-1}(U_1)\cap c^{-1}(U_2)\). Then, \(x \in c^{-1}(U_1)\) and \(x\in c^{-1}(U_2)\). Thus, \(c(x)\in U_1\) and \(c(x)\in U_2\). So, \(x\in c^{-1}(U_1)\) and \(x\in c^{-1}(U_2)\). \(c(x)\in U_1\cap U_2\). Therefore, \(c^{-1}(U_1\cap U_2)\supseteq c^{-1}(U_1)\cap c^{-1}(U_2)\).
+    Therfore \(c^{-1}(U_1\cap U_2)= c^{-1}(U_1)\cap c^{-1}(U_2)\).
+  \end{itemize}
+\item
+  \textbf{Claim 4}: \(c^{-1}(\emptyset)=\emptyset\).\\
+  Assume the contray, \(c^{-1}(\emptyset)\neq \emptyset\). Then we can choose that \(x\in c^{-1}(\emptyset)\). Thus, \(c(x)\in\emptyset\). This is a contardiction. Therefore, \(c^{-1}(\emptyset)\)
+\item
+  \textbf{Claim 5}: \(c^{-1}(U_1\cup U_2)= c^{-1}(U_1)\cup c^{-1}(U_2)\).\\
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{subclaim 5.1} : \(c^{-1}(U_1\cup U_2)\subseteq c^{-1}(U_1)\cup c^{-1}(U_2)\)\\
+    Let \(y\in c^{-1}(U_1\cup U_2)\). Then, \(c(y)\in U_1\cup U_2\). Thus, \(c(y)\in U_1\) or \(c(y)\in U_2\). So, \(\in c^{-1}(U_1)\) or \(y\in c^{-1}(U_2)\). Thus, \(y \in c^{-1}(U_1)\cup c^{-1}(U_2)\). Therefore, \(c^{-1}(U_1\cup U_2)\subseteq c^{-1}(U_1)\cup c^{-1}(U_2)\).
+  \item
+    \emph{subclaim 5.2} : \(c^{-1}(U_1\cup U_2)\supseteq c^{-1}(U_1)\cup c^{-1}(U_2)\)\\
+    Let \(x\in c^{-1}(U_1)\cup c^{-1}(U_2)\). Then, \(x \in c^{-1}(U_1)\) or \(x\in c^{-1}(U_2)\). Thus, \(c(x)\in U_1\) or \(c(x)\in U_2\). So, \(x\in c^{-1}(U_1)\) or \(x\in c^{-1}(U_2)\). \(c(x)\in U_1\cup U_2\). Therefore, \(c^{-1}(U_1\cup U_2)\supseteq c^{-1}(U_1)\cup c^{-1}(U_2)\).
+    Therfore \(c^{-1}(U_1\cup U_2)= c^{-1}(U_1)\cup c^{-1}(U_2)\).
+  \end{itemize}
+\item
+  \textbf{Claim 6}: If \(c:[0,1]\to M\) be continuous map such that \(c(0)=p,c(1)=q\), then \([0,1]=c^{-1}(M)\)\textbackslash{}
+  Recall the definition of pre image of \(M\).
+  \[c^{-1}(M):=\{x\in M | c(x)\in M\}\]
+
+  \begin{itemize}
+  \item
+    \emph{Subclaim 6.1}: \([0,1]\subseteq c^{-1}(M)\).\\
+    Let \(a\in [0,1]\). Then \(c(a)\in M\). Thus, \(a\in c^{-1}(M)\). Hence, \([0,1]\subseteq c^{-1}(M)\). Thus, \(a\in c^{-1}(M)\).
+  \item
+    \emph{Subcliam 6.2}: \([0,1]\supseteq c^{-1}(M)\).\\
+    Let \(b\in c^{-1}(M)\). So, \([0,1]\subseteq c^{-1}(M)\). Thus, \(b\in c^{-1}(M)\). Hence \(c(b)\in M\). Thus, \(b\in [0,1]\).
+  \end{itemize}
+\item
+  \textbf{Claim 7} : \(V\neq \emptyset\).\\
+  Since \(p\neq q\) and \(q=c(1)\), then \(1\not\in c^{-1}(\{p\})=U\). Thus, \(1\in V=[0,1]\setminus U\). Therefore, \(V\neq \emptyset\).
+\item
+  \textbf{Claim 8}: \([0,1]\) is connected.\\
+  We are going to use proof by contradiction.
+  Suppose that \(A,B\) is a separation of \([0,1]\).
+  Let \(a \in A\), \(b \in B\).
+  Without loss of generality, suppose that \(a < b\).
+  Since \(a, b \in [0,1]\), and \([0,1]\) is an interval, \([a,b] \subseteq [0,1]\). Let \(A' = A \cap [a,b]\) and \(B' = B \cap [a,b]\).Then,
+  \begin{align*}
+  A' \cup B' &= (A \cap [a,b]) \cup (B \cap [a,b]) \\
+  &= (A \cup B) \cap [a,b] \quad \text{(Intersection Distributes over Union)} \\
+  &= [a,b] \quad \text{(Intersection with Subset is Subset)}
+  \end{align*}
+  By the definition of a separation, both \(A\) and \(B\) are closed in \([0,1]\).
+  Hence by Closed Set in Topological Subspace, \(A'\) and \(B'\) are also closed in \([a,b]\).
+  From Closed Set in Topological Subspace: Corollary, \(A'\) and \(B'\) are closed in \(\mathbb{R}\).
+  Now, since \(B' \neq \emptyset\), and \(B\) is bounded below (by, for example, \(a\)), by the Continuum Property \(b' := \inf(B')\) exists, and \(b' \geq a\).
+  We have that \(B'\) is closed in \(\mathbb{R}\).
+  Hence from Closure of Real Interval is Closed Real Interval, \(b' \in B'\).
+  Since \(a \in A'\) and \(A \cap B = \emptyset\), it follows that \(b' > a\).
+  Now let \(A'' = A' \cap [a,b']\).
+  Using the same argument as for \(B'\), we have that \(a'' = \sup(A'')\) exists, that \(a'' \in A''\) and also \(a'' < b'\).
+  Now \((a'',b') \cap A' = \emptyset\) or \(a''\) would not be an upper bound for \(A''\).
+  Similarly, \((a'',b') \cap B' = \emptyset\) or \(b'\) would not be a lower bound for \(B''\).
+  Thus, \((a'',b') \cap (A' \cup B') = \emptyset\).
+  But since \(a < a'' < b' < b\), we also have \((a'',b') \subseteq [a,b]\), and \((a'',b')\) is non-empty.
+  So, there is an element \(z \in (a'',b')\), and hence in \([a,b]\), which is not in \(A' \cup B'\).
+  This contradicts (1) above, which says that we have \(A' \cup B' = [a,b]\).
+  From this contradiction it follows that there can be no such separation \(A \mid B\) on the interval \([0,1]\).
+  Therefore, by definition, \([0,1]\) is connected.
+\end{itemize}
+
+By claim 1,2 and 7, \(U,V\) are separation of \([0,1]\). This is contartract the the connectedness of \([0,1]\) interval.
+\end{proof}
+
+\begin{proposition}
+\protect\hypertarget{prp:unnamed-chunk-18}{}\label{prp:unnamed-chunk-18}Every connected \(1\)-dimensional topological manifold is homeomorphic to \(\mathbb{R}\) or to \(S^1\).
+\end{proposition}
+
+\begin{proof}
+Hard
+\end{proof}
+
+The only compact,connected topological manifold of dimension \(1\) is \(S^1\)
+
+\begin{theorem}
+\protect\hypertarget{thm:unnamed-chunk-20}{}\label{thm:unnamed-chunk-20}Let \(M\) and \(A\) be sets. For all \(\alpha \in A\) assume that \(U_\alpha \subset M\) and \(V_\alpha \subset \mathbb{R}^n\) are subsets and that \(\varphi_\alpha : U_\alpha \rightarrow V_\alpha\) are bijective maps. Suppose the following holds:
+
+\begin{enumerate}
+\def\labelenumi{(\roman{enumi})}
+\item
+  \(\bigcup_{\alpha \in A} U_\alpha = M\),
+\item
+  \(\varphi_\alpha(U_\alpha \cap U_\beta) \subset \mathbb{R}^n\) is open for all \(\alpha, \beta \in A\) and
+\item
+  \(\varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \rightarrow \varphi_\beta(U_\alpha \cap U_\beta)\) is continuous for all \(\alpha, \beta \in A\).
+\end{enumerate}
+
+Then \(M\) carries a unique topology for which all \(U_\alpha\) are open sets and all \(\varphi_\alpha\) are homeomorphisms.
+\end{theorem}
+
+\begin{figure}
+\centering
+\includegraphics{figures/ch1/fig09.png}
+\caption{\label{fig:fig09}\(~\)}
+\end{figure}
+
+\begin{proof}
+We first show \emph{uniqueness}:\\
+Let \(\mathcal{T}\) be a topology on \(M\) containing the \(U_\alpha\) and such that the \(\varphi_\alpha\) are homeomorphisms.
+If \(W \in \mathcal{T}\), then also \(W \cap U_\alpha \in \mathcal{T}\) and \(\varphi_\alpha(W \cap U_\alpha)\) is open for all \(\alpha \in A\).
+Conversely, if \(W \subset M\) is a subset such that \(\varphi_\alpha(W \cap U_\alpha) \subset \mathbb{R}^n\) is open for all \(\alpha \in A\), then
+\(W \cap U_\alpha\) is also open in \(U_\alpha\) for all \(\alpha\). Since \(U_\alpha\) is open in \(M\), the set \(W \cap U_\alpha\) is open in \(M\).
+By (i), \(W = \bigcup_{\alpha \in A} (W \cap U_\alpha)\) is also open in \(M\). We have shown that \(W \in \mathcal{T}\) if and only
+if \(\varphi_\alpha(W \cap U_\alpha)\) is open in \(\mathbb{R}^n\) for all \(\alpha\),
+\[\mathcal{T} = \{W \subset M :~ \varphi_\alpha(W \cap U_\alpha) \subset \mathbb{R}^n \text{ is open for all } \alpha \in A\}\].
+\end{proof}
 
   \bibliography{book.bib,packages.bib}
 

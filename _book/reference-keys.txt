@@ -19,9 +19,12 @@ def:unnamed-chunk-12
 fig:fig06
 exm:unnamed-chunk-13
 fig:fig07
-prp:unnamed-chunk-14
-def:unnamed-chunk-16
+prp:21
+def:unnamed-chunk-15
 fig:fig08
+prp:unnamed-chunk-18
+thm:unnamed-chunk-20
+fig:fig09
 basic-theroms-and-definitions
 stereographic-projection
 manifolds
