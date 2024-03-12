@@ -294,8 +294,8 @@ Hard
 ```
 The only compact,connected topological manifold of dimension $1$ is $S^1$
 
-```{theorem }
-Let $M$ and $A$ be sets. For all $\alpha \in A$ assume that $U_\alpha \subset M$ and $V_\alpha \subset \mathbb{R}^n$ are subsets and that $\varphi_\alpha : U_\alpha \rightarrow V_\alpha$ are bijective maps. Suppose the following holds:
+```{theorem,label='110'}
+Let $M$ and $A$ be sets. (Here $A$ is the index set.) For all $\alpha \in A$ assume that $U_\alpha \subset M$ and $V_\alpha \subset \mathbb{R}^n$ are subsets and that $\varphi_\alpha : U_\alpha \rightarrow V_\alpha$ are bijective maps. Suppose the following holds:
 
 (i) $\bigcup_{\alpha \in A} U_\alpha = M$,
 
@@ -321,5 +321,30 @@ $$\mathcal{T} = \{W \subset M :~ \varphi_\alpha(W \cap U_\alpha) \subset \mathbb
 
 ```
 
+```{example,name='Real-projective space.'}
+We define the real-projective space by
+\[ M = \mathbb{RP}^n := \mathbb{P}(\mathbb{R}^{n+1}) := \{ L \subset \mathbb{R}^{n+1} \mid L \text{ is a one-dimensional vector subspace} \}. \]
+
+We will use Theorem \@ref(thm:110) to equip \(\mathbb{RP}^n\) with the structure of an \(n\)-dimensional topological manifold. Let's set
+\[ A := \{ \text{affine-linear embeddings } \alpha : \mathbb{R}^n \to \mathbb{R}^{n+1} \text{ with } 0 \notin \alpha(\mathbb{R}^n) \}. \]
+
+Since \(\alpha\) is affine-linear, there exist a matrix \(B \in \text{M}_{(n+1) \times n} (\mathbb{R})\) and a vector \(c \in \mathbb{R}^{n+1}\) such that
+\[ \alpha(x) = Bx + c \quad \text{for all } x \in \mathbb{R}^n. \]
+
+As \(\alpha\) is an embedding, \(B\) has maximal rank, i.e., \(\text{rank}(B) = n\).
+
+
+
+Consequently, \(\alpha(\mathbb{R}^n)\) is an affine-linear hyperplane. Let's set
+\[ U_\alpha := \{ L \in \mathbb{RP}^n \mid L \cap \alpha(\mathbb{R}^n) \neq \varnothing \}. \]
+
+For \(L \in U_\alpha\), the space \(L \cap \alpha(\mathbb{R}^n)\) consists of exactly one point, because otherwise we would have \(L \subset \alpha(\mathbb{R}^n)\) and hence \(0 \in \alpha(\mathbb{R}^n)\), which is a contradiction. Moreover, we have
+\[ \mathbb{RP}^n \setminus U_\alpha = \{ L \mid L \subset B(\mathbb{R}^n) \text{ is a one-dimensional subspace} \} \]
+where \(\alpha(x) = Bx + c\). For \(\alpha \in A\), let's set \(V_\alpha := \mathbb{R}^n\) and define
+\[ \varphi_\alpha : U_\alpha \to V_\alpha, \quad \varphi_\alpha(L) := \alpha^{-1}(L \cap \alpha(\mathbb{R}^n)). \]
+
+Then \(x_\alpha\) is a bijective map, and we have
+\[ \varphi_\alpha^{-1}(v) = R \cdot \alpha(v). \]
+```
 
 

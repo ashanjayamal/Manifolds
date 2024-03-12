@@ -80,7 +80,7 @@
 
 \title{Manifolds}
 \author{Ashan Jayamal \& Nalamudu Samarasinghe}
-\date{2024-03-11}
+\date{2024-03-12}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -150,44 +150,6 @@ i.e., for every pair of distinct points \(x, y\) in \(X\), there are disjoint ne
 ::: \{.definition \#unnamed-chunk-5 name=``Countability''\}
 A space \(X\) is said to have a \textbf{countable basis at the point \(x\)} if there is a countable collection \(\{U_n\}_{n\in\mathbb{Z}^+}\) of neighborhoods of \(x\) such that any neighborhood \(U\) of \(x\) contains at least one of the sets \(U_n\). A space \(X\) that has a countable basis at each of its points is said to satisfy the first countability axiom.
 :::
-
-\hypertarget{stereographic-projection}{%
-\subsection{Stereographic Projection}\label{stereographic-projection}}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Stereographic Projection plane \(\mathbb{R}\) and the 1-sphere minus a point}\\
-  The 1-sphere \(S^1\) is the set of points \((x,y,z) \in \mathbb{R}^3\) such that \(x^2 + y^2 + z^2 = 1\).
-  \[S^1:=\{(x,y): ||(x,y)||=1\}\]
-\end{itemize}
-
-Let \(S^1 \setminus \{N\}\) denote the 1-sphere minus (circle) its north pole, i.e., the point \((0,1)\).
-
-There exists a homeomorphism \(\varphi : S^1 \setminus \{N\} \to \mathbb{R}\), which can be described as follows. In coordinates, this map is precisely
-\[\varphi(x,y) = \frac{x}{1-y}\]
-
-\includegraphics{figures/ch1/fig05.jpg}
-- \textbf{Stereographic Projection plane \(\mathbb{R}^2\) and the 2-sphere minus a point}\\
-
-Stereographic projection is an important homeomorphism between the plane \(\mathbb{R}^2\) and the 2-sphere minus a point. The 2-sphere \(S^2\) is the set of points \((x,y,z) \in \mathbb{R}^3\) such that \(x^2 + y^2 + z^2 = 1\). Let \(S^2 \setminus \{N\}\) denote the 2-sphere minus its north pole, i.e., the point \((0,0,1)\).
-
-There exists a homeomorphism \(\varphi : S^2 \setminus \{N\} \to \mathbb{R}^2\), which can be described as follows.
-
-For a point \(p \in S^2 \setminus \{N\}\), let \(\varphi(p)\) denote the unique point in \(P\) such that the intersection of the segment \(\overline{Nf(p)}\) and \(S^2\) is \(p\). In coordinates, this map is precisely
-\[\varphi(x,y,z) = \left(\frac{x}{1-z}, \frac{y}{1-z}\right).\]
-
-\begin{figure}
-\centering
-\includegraphics{figures/ch1/fig03.jpg}
-\caption{\label{fig:fig03}\(~\)}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{figures/ch1/fig04.jpg}
-\caption{\label{fig:fig04}\(~\)}
-\end{figure}
 
 \begin{definition}
 \protect\hypertarget{def:unnamed-chunk-6}{}\label{def:unnamed-chunk-6}If \(X\) is a space, a point \(x\) of \(X\) is said to be an \textbf{isolated point} of \(X\) if the one-point set \(\{x\}\) is open in \(X\).
@@ -535,7 +497,7 @@ Hard
 The only compact,connected topological manifold of dimension \(1\) is \(S^1\)
 
 \begin{theorem}
-\protect\hypertarget{thm:unnamed-chunk-20}{}\label{thm:unnamed-chunk-20}Let \(M\) and \(A\) be sets. For all \(\alpha \in A\) assume that \(U_\alpha \subset M\) and \(V_\alpha \subset \mathbb{R}^n\) are subsets and that \(\varphi_\alpha : U_\alpha \rightarrow V_\alpha\) are bijective maps. Suppose the following holds:
+\protect\hypertarget{thm:110}{}\label{thm:110}Let \(M\) and \(A\) be sets. (Here \(A\) is the index set.) For all \(\alpha \in A\) assume that \(U_\alpha \subset M\) and \(V_\alpha \subset \mathbb{R}^n\) are subsets and that \(\varphi_\alpha : U_\alpha \rightarrow V_\alpha\) are bijective maps. Suppose the following holds:
 
 \begin{enumerate}
 \def\labelenumi{(\roman{enumi})}
@@ -566,6 +528,99 @@ By (i), \(W = \bigcup_{\alpha \in A} (W \cap U_\alpha)\) is also open in \(M\). 
 if \(\varphi_\alpha(W \cap U_\alpha)\) is open in \(\mathbb{R}^n\) for all \(\alpha\),
 \[\mathcal{T} = \{W \subset M :~ \varphi_\alpha(W \cap U_\alpha) \subset \mathbb{R}^n \text{ is open for all } \alpha \in A\}\].
 \end{proof}
+
+\begin{example}[Real-projective space.]
+\protect\hypertarget{exm:unnamed-chunk-21}{}\label{exm:unnamed-chunk-21}We define the real-projective space by
+\[ M = \mathbb{RP}^n := \mathbb{P}(\mathbb{R}^{n+1}) := \{ L \subset \mathbb{R}^{n+1} \mid L \text{ is a one-dimensional vector subspace} \}. \]
+
+We will use Theorem \ref{thm:110} to equip \(\mathbb{RP}^n\) with the structure of an \(n\)-dimensional topological manifold. Let's set
+\[ A := \{ \text{affine-linear embeddings } \alpha : \mathbb{R}^n \to \mathbb{R}^{n+1} \text{ with } 0 \notin \alpha(\mathbb{R}^n) \}. \]
+
+Since \(\alpha\) is affine-linear, there exist a matrix \(B \in \text{M}_{(n+1) \times n} (\mathbb{R})\) and a vector \(c \in \mathbb{R}^{n+1}\) such that
+\[ \alpha(x) = Bx + c \quad \text{for all } x \in \mathbb{R}^n. \]
+
+As \(\alpha\) is an embedding, \(B\) has maximal rank, i.e., \(\text{rank}(B) = n\).
+
+Consequently, \(\alpha(\mathbb{R}^n)\) is an affine-linear hyperplane. Let's set
+\[ U_\alpha := \{ L \in \mathbb{RP}^n \mid L \cap \alpha(\mathbb{R}^n) \neq \varnothing \}. \]
+
+For \(L \in U_\alpha\), the space \(L \cap \alpha(\mathbb{R}^n)\) consists of exactly one point, because otherwise we would have \(L \subset \alpha(\mathbb{R}^n)\) and hence \(0 \in \alpha(\mathbb{R}^n)\), which is a contradiction. Moreover, we have
+\[ \mathbb{RP}^n \setminus U_\alpha = \{ L \mid L \subset B(\mathbb{R}^n) \text{ is a one-dimensional subspace} \} \]
+where \(\alpha(x) = Bx + c\). For \(\alpha \in A\), let's set \(V_\alpha := \mathbb{R}^n\) and define
+\[ \varphi_\alpha : U_\alpha \to V_\alpha, \quad \varphi_\alpha(L) := \alpha^{-1}(L \cap \alpha(\mathbb{R}^n)). \]
+
+Then \(x_\alpha\) is a bijective map, and we have
+\[ \varphi_\alpha^{-1}(v) = R \cdot \alpha(v). \]
+\end{example}
+
+\hypertarget{appendix-appendix}{%
+\appendix}
+
+
+\hypertarget{stereographic-projection}{%
+\chapter{Stereographic Projection}\label{stereographic-projection}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Stereographic Projection plane \(\mathbb{R}\) and the 1-sphere minus a point}\\
+  The 1-sphere \(S^1\) is the set of points \((x,y,z) \in \mathbb{R}^3\) such that \(x^2 + y^2 + z^2 = 1\).
+  \[S^1:=\{(x,y): ||(x,y)||=1\}\]
+\end{itemize}
+
+Let \(S^1 \setminus \{N\}\) denote the 1-sphere minus (circle) its north pole, i.e., the point \((0,1)\).
+
+There exists a homeomorphism \(\varphi : S^1 \setminus \{N\} \to \mathbb{R}\), which can be described as follows. In coordinates, this map is precisely
+\[\varphi(x,y) = \frac{x}{1-y}\]
+
+\includegraphics{figures/ch1/fig05.jpg}
+- \textbf{Stereographic Projection plane \(\mathbb{R}^2\) and the 2-sphere minus a point}\\
+
+Stereographic projection is an important homeomorphism between the plane \(\mathbb{R}^2\) and the 2-sphere minus a point. The 2-sphere \(S^2\) is the set of points \((x,y,z) \in \mathbb{R}^3\) such that \(x^2 + y^2 + z^2 = 1\). Let \(S^2 \setminus \{N\}\) denote the 2-sphere minus its north pole, i.e., the point \((0,0,1)\).
+
+There exists a homeomorphism \(\varphi : S^2 \setminus \{N\} \to \mathbb{R}^2\), which can be described as follows.
+
+For a point \(p \in S^2 \setminus \{N\}\), let \(\varphi(p)\) denote the unique point in \(P\) such that the intersection of the segment \(\overline{Nf(p)}\) and \(S^2\) is \(p\). In coordinates, this map is precisely
+\[\varphi(x,y,z) = \left(\frac{x}{1-z}, \frac{y}{1-z}\right).\]
+
+\begin{figure}
+\centering
+\includegraphics{figures/ch1/fig03.jpg}
+\caption{\label{fig:fig03}\(~\)}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/ch1/fig04.jpg}
+\caption{\label{fig:fig04}\(~\)}
+\end{figure}
+
+\hypertarget{examples-of-affine-maps}{%
+\chapter{Examples of Affine maps}\label{examples-of-affine-maps}}
+
+\begin{figure}
+\centering
+\includegraphics{figures/Examples/fig1.png}
+\caption{\label{fig:fige01}\(~\)}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/Examples/fig2.png}
+\caption{\label{fig:fige02}\(~\)}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/Examples/fig4.png}
+\caption{\label{fig:fige04}\(~\)}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{figures/Examples/fig3.png}
+\caption{\label{fig:fige03}\(~\)}
+\end{figure}
 
   \bibliography{book.bib,packages.bib}
 

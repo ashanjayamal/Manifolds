@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal &amp; Nalamudu Samarasinghe" />
 
 
-<meta name="date" content="2024-03-11" />
+<meta name="date" content="2024-03-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,14 +76,14 @@
 <li><a href="./">Manifolds</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Basic Theroms and Definitions</a>
-<ul>
-<li class="chapter" data-level="1.0.1" data-path="index.html"><a href="index.html#stereographic-projection"><i class="fa fa-check"></i><b>1.0.1</b> Stereographic Projection</a></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Basic Theroms and Definitions</a></li>
 <li class="chapter" data-level="2" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>2</b> Manifolds</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="manifolds.html"><a href="manifolds.html#topological-manifolds"><i class="fa fa-check"></i><b>2.1</b> Topological Manifolds</a></li>
 </ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="stereographic-projection.html"><a href="stereographic-projection.html"><i class="fa fa-check"></i><b>A</b> Stereographic Projection</a></li>
+<li class="chapter" data-level="B" data-path="examples-of-affine-maps.html"><a href="examples-of-affine-maps.html"><i class="fa fa-check"></i><b>B</b> Examples of Affine maps</a></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages" target="blank">AJ</a></li>
 
@@ -107,7 +107,7 @@
 <div id="header">
 <h1 class="title">Manifolds</h1>
 <p class="author"><em>Ashan Jayamal &amp; Nalamudu Samarasinghe</em></p>
-<p class="date"><em>2024-03-11</em></p>
+<p class="date"><em>2024-03-12</em></p>
 </div>
 <div id="basic-theroms-and-definitions" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Basic Theroms and Definitions<a href="index.html#basic-theroms-and-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -146,47 +146,10 @@ Figure 1.1: <span class="math inline">\(~\)</span>
 <div class="definition">
 <p><span id="def:unnamed-chunk-5" class="definition"><strong>Definition 1.6  (Countability) </strong></span>A space <span class="math inline">\(X\)</span> is said to have a <strong>countable basis at the point <span class="math inline">\(x\)</span></strong> if there is a countable collection <span class="math inline">\(\{U_n\}_{n\in\mathbb{Z}^+}\)</span> of neighborhoods of <span class="math inline">\(x\)</span> such that any neighborhood <span class="math inline">\(U\)</span> of <span class="math inline">\(x\)</span> contains at least one of the sets <span class="math inline">\(U_n\)</span>. A space <span class="math inline">\(X\)</span> that has a countable basis at each of its points is said to satisfy the first countability axiom.</p>
 </div>
-<div id="stereographic-projection" class="section level3 hasAnchor" number="1.0.1">
-<h3><span class="header-section-number">1.0.1</span> Stereographic Projection<a href="index.html#stereographic-projection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><strong>Stereographic Projection plane <span class="math inline">\(\mathbb{R}\)</span> and the 1-sphere minus a point</strong><br />
-The 1-sphere <span class="math inline">\(S^1\)</span> is the set of points <span class="math inline">\((x,y,z) \in \mathbb{R}^3\)</span> such that <span class="math inline">\(x^2 + y^2 + z^2 = 1\)</span>.
-<span class="math display">\[S^1:=\{(x,y): ||(x,y)||=1\}\]</span></li>
-</ul>
-<p>Let <span class="math inline">\(S^1 \setminus \{N\}\)</span> denote the 1-sphere minus (circle) its north pole, i.e., the point <span class="math inline">\((0,1)\)</span>.</p>
-<p>There exists a homeomorphism <span class="math inline">\(\varphi : S^1 \setminus \{N\} \to \mathbb{R}\)</span>, which can be described as follows. In coordinates, this map is precisely
-<span class="math display">\[\varphi(x,y) = \frac{x}{1-y}\]</span></p>
-<div class="figure"><span style="display:block;" id="fig:fig05"></span>
-<img src="figures/ch1/fig05.jpg" alt="$~$"  />
-<p class="caption">
-Figure 1.2: <span class="math inline">\(~\)</span>
-</p>
-</div>
-<ul>
-<li><strong>Stereographic Projection plane <span class="math inline">\(\mathbb{R}^2\)</span> and the 2-sphere minus a point</strong><br />
-</li>
-</ul>
-<p>Stereographic projection is an important homeomorphism between the plane <span class="math inline">\(\mathbb{R}^2\)</span> and the 2-sphere minus a point. The 2-sphere <span class="math inline">\(S^2\)</span> is the set of points <span class="math inline">\((x,y,z) \in \mathbb{R}^3\)</span> such that <span class="math inline">\(x^2 + y^2 + z^2 = 1\)</span>. Let <span class="math inline">\(S^2 \setminus \{N\}\)</span> denote the 2-sphere minus its north pole, i.e., the point <span class="math inline">\((0,0,1)\)</span>.</p>
-<p>There exists a homeomorphism <span class="math inline">\(\varphi : S^2 \setminus \{N\} \to \mathbb{R}^2\)</span>, which can be described as follows.</p>
-<p>For a point <span class="math inline">\(p \in S^2 \setminus \{N\}\)</span>, let <span class="math inline">\(\varphi(p)\)</span> denote the unique point in <span class="math inline">\(P\)</span> such that the intersection of the segment <span class="math inline">\(\overline{Nf(p)}\)</span> and <span class="math inline">\(S^2\)</span> is <span class="math inline">\(p\)</span>. In coordinates, this map is precisely
-<span class="math display">\[\varphi(x,y,z) = \left(\frac{x}{1-z}, \frac{y}{1-z}\right).\]</span></p>
-<div class="figure"><span style="display:block;" id="fig:fig03"></span>
-<img src="figures/ch1/fig03.jpg" alt="$~$"  />
-<p class="caption">
-Figure 1.3: <span class="math inline">\(~\)</span>
-</p>
-</div>
-<div class="figure"><span style="display:block;" id="fig:fig04"></span>
-<img src="figures/ch1/fig04.jpg" alt="$~$"  />
-<p class="caption">
-Figure 1.4: <span class="math inline">\(~\)</span>
-</p>
-</div>
 <div class="definition">
 <p><span id="def:unnamed-chunk-6" class="definition"><strong>Definition 1.7  </strong></span>If <span class="math inline">\(X\)</span> is a space, a point <span class="math inline">\(x\)</span> of <span class="math inline">\(X\)</span> is said to be an <strong>isolated point</strong> of <span class="math inline">\(X\)</span> if the one-point set <span class="math inline">\(\{x\}\)</span> is open in <span class="math inline">\(X\)</span>.</p>
 </div>
 
-</div>
 </div>
             </section>
 

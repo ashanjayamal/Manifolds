@@ -23,7 +23,7 @@
 <meta name="author" content="Ashan Jayamal &amp; Nalamudu Samarasinghe" />
 
 
-<meta name="date" content="2024-03-11" />
+<meta name="date" content="2024-03-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="index.html"/>
-
+<link rel="next" href="stereographic-projection.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -76,14 +76,14 @@
 <li><a href="./">Manifolds</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Basic Theroms and Definitions</a>
-<ul>
-<li class="chapter" data-level="1.0.1" data-path="index.html"><a href="index.html#stereographic-projection"><i class="fa fa-check"></i><b>1.0.1</b> Stereographic Projection</a></li>
-</ul></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Basic Theroms and Definitions</a></li>
 <li class="chapter" data-level="2" data-path="manifolds.html"><a href="manifolds.html"><i class="fa fa-check"></i><b>2</b> Manifolds</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="manifolds.html"><a href="manifolds.html#topological-manifolds"><i class="fa fa-check"></i><b>2.1</b> Topological Manifolds</a></li>
 </ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="stereographic-projection.html"><a href="stereographic-projection.html"><i class="fa fa-check"></i><b>A</b> Stereographic Projection</a></li>
+<li class="chapter" data-level="B" data-path="examples-of-affine-maps.html"><a href="examples-of-affine-maps.html"><i class="fa fa-check"></i><b>B</b> Examples of Affine maps</a></li>
 <li class="divider"></li>
 <li><a href="https://ashanjayamal.github.io/academicpages" target="blank">AJ</a></li>
 
@@ -353,7 +353,7 @@ Therefore, by definition, <span class="math inline">\([0,1]\)</span> is connecte
 </div>
 <p>The only compact,connected topological manifold of dimension <span class="math inline">\(1\)</span> is <span class="math inline">\(S^1\)</span></p>
 <div class="theorem">
-<p><span id="thm:unnamed-chunk-20" class="theorem"><strong>Theorem 2.1  </strong></span>Let <span class="math inline">\(M\)</span> and <span class="math inline">\(A\)</span> be sets. For all <span class="math inline">\(\alpha \in A\)</span> assume that <span class="math inline">\(U_\alpha \subset M\)</span> and <span class="math inline">\(V_\alpha \subset \mathbb{R}^n\)</span> are subsets and that <span class="math inline">\(\varphi_\alpha : U_\alpha \rightarrow V_\alpha\)</span> are bijective maps. Suppose the following holds:</p>
+<p><span id="thm:110" class="theorem"><strong>Theorem 2.1  </strong></span>Let <span class="math inline">\(M\)</span> and <span class="math inline">\(A\)</span> be sets. (Here <span class="math inline">\(A\)</span> is the index set.) For all <span class="math inline">\(\alpha \in A\)</span> assume that <span class="math inline">\(U_\alpha \subset M\)</span> and <span class="math inline">\(V_\alpha \subset \mathbb{R}^n\)</span> are subsets and that <span class="math inline">\(\varphi_\alpha : U_\alpha \rightarrow V_\alpha\)</span> are bijective maps. Suppose the following holds:</p>
 <ol style="list-style-type: lower-roman">
 <li><p><span class="math inline">\(\bigcup_{\alpha \in A} U_\alpha = M\)</span>,</p></li>
 <li><p><span class="math inline">\(\varphi_\alpha(U_\alpha \cap U_\beta) \subset \mathbb{R}^n\)</span> is open for all <span class="math inline">\(\alpha, \beta \in A\)</span> and</p></li>
@@ -377,16 +377,36 @@ By (i), <span class="math inline">\(W = \bigcup_{\alpha \in A} (W \cap U_\alpha)
 if <span class="math inline">\(\varphi_\alpha(W \cap U_\alpha)\)</span> is open in <span class="math inline">\(\mathbb{R}^n\)</span> for all <span class="math inline">\(\alpha\)</span>,
 <span class="math display">\[\mathcal{T} = \{W \subset M :~ \varphi_\alpha(W \cap U_\alpha) \subset \mathbb{R}^n \text{ is open for all } \alpha \in A\}\]</span>.</p>
 </div>
+<div class="example">
+<p><span id="exm:unnamed-chunk-21" class="example"><strong>Example 2.6  (Real-projective space.) </strong></span>We define the real-projective space by
+<span class="math display">\[ M = \mathbb{RP}^n := \mathbb{P}(\mathbb{R}^{n+1}) := \{ L \subset \mathbb{R}^{n+1} \mid L \text{ is a one-dimensional vector subspace} \}. \]</span></p>
+<p>We will use Theorem <a href="manifolds.html#thm:110">2.1</a> to equip <span class="math inline">\(\mathbb{RP}^n\)</span> with the structure of an <span class="math inline">\(n\)</span>-dimensional topological manifold. Let’s set
+<span class="math display">\[ A := \{ \text{affine-linear embeddings } \alpha : \mathbb{R}^n \to \mathbb{R}^{n+1} \text{ with } 0 \notin \alpha(\mathbb{R}^n) \}. \]</span></p>
+<p>Since <span class="math inline">\(\alpha\)</span> is affine-linear, there exist a matrix <span class="math inline">\(B \in \text{M}_{(n+1) \times n} (\mathbb{R})\)</span> and a vector <span class="math inline">\(c \in \mathbb{R}^{n+1}\)</span> such that
+<span class="math display">\[ \alpha(x) = Bx + c \quad \text{for all } x \in \mathbb{R}^n. \]</span></p>
+<p>As <span class="math inline">\(\alpha\)</span> is an embedding, <span class="math inline">\(B\)</span> has maximal rank, i.e., <span class="math inline">\(\text{rank}(B) = n\)</span>.</p>
+<p>Consequently, <span class="math inline">\(\alpha(\mathbb{R}^n)\)</span> is an affine-linear hyperplane. Let’s set
+<span class="math display">\[ U_\alpha := \{ L \in \mathbb{RP}^n \mid L \cap \alpha(\mathbb{R}^n) \neq \varnothing \}. \]</span></p>
+<p>For <span class="math inline">\(L \in U_\alpha\)</span>, the space <span class="math inline">\(L \cap \alpha(\mathbb{R}^n)\)</span> consists of exactly one point, because otherwise we would have <span class="math inline">\(L \subset \alpha(\mathbb{R}^n)\)</span> and hence <span class="math inline">\(0 \in \alpha(\mathbb{R}^n)\)</span>, which is a contradiction. Moreover, we have
+<span class="math display">\[ \mathbb{RP}^n \setminus U_\alpha = \{ L \mid L \subset B(\mathbb{R}^n) \text{ is a one-dimensional subspace} \} \]</span>
+where <span class="math inline">\(\alpha(x) = Bx + c\)</span>. For <span class="math inline">\(\alpha \in A\)</span>, let’s set <span class="math inline">\(V_\alpha := \mathbb{R}^n\)</span> and define
+<span class="math display">\[ \varphi_\alpha : U_\alpha \to V_\alpha, \quad \varphi_\alpha(L) := \alpha^{-1}(L \cap \alpha(\mathbb{R}^n)). \]</span></p>
+<p>Then <span class="math inline">\(x_\alpha\)</span> is a bijective map, and we have
+<span class="math display">\[ \varphi_\alpha^{-1}(v) = R \cdot \alpha(v). \]</span></p>
+</div>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="stereographic-projection.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
